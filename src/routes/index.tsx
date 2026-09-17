@@ -3,12 +3,14 @@ import {
   ArrowRight,
   Activity,
   Building2,
+  Check,
   Download,
   Globe,
   Headphones,
   House,
   MapPin,
   Menu,
+  MessageCircle,
   Network,
   Router,
   Search,
@@ -26,6 +28,12 @@ import { FormEvent, useState, useEffect, useRef } from "react";
 import customerImage from "@/assets/myrepublic-customer.png";
 import gaugeGray from "@/assets/speedometer-gray.png";
 import gaugePurple from "@/assets/speedometer-purple.png";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -55,22 +63,45 @@ const packages = [
     name: "Value",
     speed: "30",
     price: "Rp 250 ribuan",
-    description: "Untuk browsing, belajar, dan kebutuhan harian.",
+    description: "Untuk browsing, belajar, dan kebutuhan harian keluarga.",
     featured: false,
+    badge: "Paling Hemat",
+    features: [
+      "Kecepatan hingga 30 Mbps",
+      "True Unlimited (Tanpa batas FUP)",
+      "Gratis biaya instalasi",
+      "Termasuk Wi-Fi Router",
+    ],
   },
   {
     name: "Fast",
     speed: "50",
     price: "Rp 300 ribuan",
-    description: "Nyaman untuk streaming dan banyak perangkat.",
+    description: "Favorit warga Purwokerto untuk streaming & banyak perangkat.",
     featured: true,
+    badge: "Terlaris di Purwokerto",
+    features: [
+      "Kecepatan hingga 50 Mbps",
+      "True Unlimited (Tanpa batas FUP)",
+      "Router Dual-Band Wi-Fi",
+      "Cocok untuk 5–7 perangkat aktif",
+      "Gratis biaya instalasi",
+    ],
   },
   {
     name: "Nova",
     speed: "100",
     price: "Rp 400 ribuan",
-    description: "Performa lebih untuk keluarga digital aktif.",
+    description: "Performa tinggi untuk gaming kompetitif, WFH, & konten kreator.",
     featured: false,
+    badge: "Performa Maksimal",
+    features: [
+      "Kecepatan hingga 100 Mbps",
+      "True Unlimited (Tanpa batas FUP)",
+      "Router Gigabit Dual-Band",
+      "Prioritas latency gaming & 4K streaming",
+      "Gratis biaya instalasi",
+    ],
   },
 ];
 
@@ -112,8 +143,10 @@ function Header() {
   const [open, setOpen] = useState(false);
   const links = [
     ["Paket Internet", "#paket"],
+    ["Speed Test", "#speedtest"],
     ["Cek Jangkauan", "#jangkauan"],
     ["Keunggulan", "#keunggulan"],
+    ["FAQ", "#faq"],
   ];
 
   return (
@@ -236,7 +269,7 @@ function Packages() {
             <article
               key={item.name}
               className={cn(
-                "relative flex min-h-[330px] w-[85vw] shrink-0 snap-center flex-col border p-7 sm:w-auto",
+                "relative flex min-h-[460px] w-[85vw] shrink-0 snap-center flex-col border p-7 sm:w-auto",
                 item.featured
                   ? "border-brand bg-brand text-brand-foreground shadow-package"
                   : "border-border bg-card text-card-foreground",
@@ -247,26 +280,57 @@ function Packages() {
                   Favorit
                 </span>
               ) : null}
-              <p
-                className={cn(
-                  "text-sm font-bold uppercase tracking-[0.12em]",
-                  item.featured ? "text-signal" : "text-brand",
-                )}
-              >
-                {item.name}
-              </p>
-              <div className="mt-8 flex items-end gap-2">
+              <div className="flex items-center gap-2">
+                <p
+                  className={cn(
+                    "text-sm font-bold uppercase tracking-[0.12em]",
+                    item.featured ? "text-signal" : "text-brand",
+                  )}
+                >
+                  {item.name}
+                </p>
+                <span
+                  className={cn(
+                    "rounded-sm px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider",
+                    item.featured
+                      ? "bg-white/15 text-brand-foreground"
+                      : "bg-muted text-muted-foreground",
+                  )}
+                >
+                  {item.badge}
+                </span>
+              </div>
+              <div className="mt-6 flex items-end gap-2">
                 <strong className="text-7xl font-black leading-none">{item.speed}</strong>
                 <span className="pb-2 text-sm font-bold">Mbps</span>
               </div>
               <p
                 className={cn(
-                  "mt-5 text-sm leading-relaxed",
+                  "mt-4 text-sm leading-relaxed",
                   item.featured ? "text-brand-foreground/75" : "text-muted-foreground",
                 )}
               >
                 {item.description}
               </p>
+
+              <ul className="mt-6 space-y-2.5 border-t border-dashed border-current/20 py-5 text-xs">
+                {item.features.map((feat) => (
+                  <li key={feat} className="flex items-center gap-2 font-medium">
+                    <Check
+                      className={cn(
+                        "size-4 shrink-0",
+                        item.featured ? "text-signal" : "text-brand",
+                      )}
+                    />
+                    <span
+                      className={item.featured ? "text-brand-foreground/90" : "text-foreground/90"}
+                    >
+                      {feat}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
               <div
                 className={cn(
                   "mt-auto border-t pt-5",
@@ -283,8 +347,21 @@ function Packages() {
                     item.featured ? "text-brand-foreground/65" : "text-muted-foreground",
                   )}
                 >
-                  Harga final mengikuti lokasi dan pilihan layanan.
+                  Harga final mengikuti lokasi dan pilihan promo.
                 </p>
+                <Button
+                  variant={item.featured ? "signal" : "brand"}
+                  className="mt-5 w-full font-bold"
+                  asChild
+                >
+                  <a
+                    href={`https://wa.me/6281234567890?text=Halo%20Admin%20MyRepublic%20Purwokerto%2C%20saya%20tertarik%20dengan%20paket%20${item.name}%20${item.speed}Mbps`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Pilih Paket {item.name}
+                  </a>
+                </Button>
               </div>
             </article>
           ))}
@@ -400,7 +477,11 @@ function SpeedTest() {
   }, [isTesting]);
 
   return (
-    <section ref={containerRef} className="bg-soft px-4 py-20 sm:py-24 lg:px-8 overflow-hidden">
+    <section
+      id="speedtest"
+      ref={containerRef}
+      className="bg-soft px-4 py-20 sm:py-24 lg:px-8 overflow-hidden"
+    >
       <div className="mx-auto max-w-[1400px]">
         <div className="mx-auto max-w-2xl text-center mb-10">
           <p className="section-kicker">Speed Test</p>
@@ -677,6 +758,91 @@ function ConversionCta() {
   );
 }
 
+const faqs = [
+  {
+    q: "Apakah pemasangan MyRepublic di Purwokerto ada promo gratis biaya instalasi?",
+    a: "Ya! MyRepublic Purwokerto rutin memberikan promo bebas biaya instalasi (Free Instalasi) serta peminjaman modem router gratis selama masa berlangganan aktif.",
+  },
+  {
+    q: "Berapa lama estimasi teknisi memasang internet setelah pendaftaran?",
+    a: "Setelah alamat Anda dipastikan masuk dalam coverage tiang ODP MyRepublic, tim teknisi Purwokerto akan menjadwalkan instalasi dalam 1–2 hari kerja sesuai ketersediaan waktu Anda.",
+  },
+  {
+    q: "Apakah internet MyRepublic benar-benar tanpa FUP (Fair Usage Policy)?",
+    a: "Benar, 100% True Unlimited tanpa FUP. Kecepatan internet Anda tidak akan pernah diturunkan meskipun mengunduh file besar atau streaming video 4K terus menerus.",
+  },
+  {
+    q: "Area mana saja di Purwokerto yang saat ini sudah terjangkau jaringan fiber?",
+    a: "Jaringan fiber MyRepublic telah menjangkau kawasan Purwokerto Timur, Barat, Utara, Selatan, area sekitar kampus UNSOED, Teluk, Bancarkembar, Karangklesem, hingga perumahan utama. Anda bisa memasukkan alamat pada form Cek Area atau menghubungi tim sales via WhatsApp untuk validasi titik ODP terdekat.",
+  },
+  {
+    q: "Apa saja syarat pendaftaran pasang baru?",
+    a: "Syaratnya sangat mudah: cukup foto KTP pemohon, alamat email, nomor WhatsApp aktif, dan titik lokasi (share loc) rumah yang ingin dipasang.",
+  },
+];
+
+function Faq() {
+  return (
+    <section id="faq" className="border-t border-border bg-background px-5 py-20 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-3xl">
+        <div className="text-center">
+          <p className="section-kicker">Tanya Jawab</p>
+          <h2 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">
+            Pertanyaan yang Sering Diajukan
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Semua hal yang perlu Anda ketahui tentang pemasangan internet MyRepublic di Purwokerto.
+          </p>
+        </div>
+
+        <div className="mt-10">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`faq-${index}`}
+                className="rounded-lg border border-border bg-card px-6 transition-colors hover:border-brand/40"
+              >
+                <AccordionTrigger className="py-5 text-left font-bold text-base hover:no-underline">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="pb-5 text-sm leading-relaxed text-muted-foreground">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FloatingWhatsApp() {
+  return (
+    <aside aria-label="Kontak WhatsApp" className="fixed bottom-6 right-6 z-50">
+      <a
+        href="https://wa.me/6281234567890?text=Halo%20Admin%20MyRepublic%20Purwokerto%2C%20saya%20ingin%20tanya%20info%20paket%20dan%20cek%20area"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat WhatsApp Sales Purwokerto"
+        className="group flex items-center gap-3 rounded-full bg-[#25D366] px-4 py-3 text-white shadow-2xl transition-all duration-300 hover:bg-[#20ba5a] hover:scale-105 active:scale-95"
+      >
+        <span className="relative flex size-6 items-center justify-center">
+          <MessageCircle className="size-6 fill-current" />
+          <span className="absolute -top-1 -right-1 flex size-2.5">
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-white opacity-75"></span>
+            <span className="relative inline-flex size-2.5 rounded-full bg-signal"></span>
+          </span>
+        </span>
+        <span className="hidden text-xs font-black tracking-wide sm:inline">
+          Chat Sales Purwokerto
+        </span>
+      </a>
+    </aside>
+  );
+}
+
 function Footer() {
   return (
     <footer className="bg-footer px-5 py-12 text-footer-foreground lg:px-8">
@@ -692,8 +858,10 @@ function Footer() {
             <p className="text-sm font-bold">Jelajahi</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-footer-foreground/65">
               <a href="#paket">Paket Internet</a>
+              <a href="#speedtest">Speed Test</a>
               <a href="#jangkauan">Cek Jangkauan</a>
               <a href="#keunggulan">Keunggulan</a>
+              <a href="#faq">FAQ</a>
             </div>
           </div>
           <div>
@@ -724,8 +892,10 @@ function Index() {
       <SpeedTest />
       <CoverageChecker />
       <Benefits />
+      <Faq />
       <ConversionCta />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 }
