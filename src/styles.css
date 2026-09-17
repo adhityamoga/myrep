@@ -326,3 +326,18 @@
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Rocket Floating & Flying Animations */
+@keyframes rocket-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(-4deg);
+  }
+}
+
+.animate-rocket-float {
+  animation: rocket-float 2.4s ease-in-out infinite;
+}
+
+
