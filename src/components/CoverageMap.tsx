@@ -1,5 +1,4 @@
 import {
-  Building2,
   CheckCircle2,
   Compass,
   ExternalLink,
@@ -17,33 +16,51 @@ import { useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
-export interface FatFeature {
-  type: "Feature";
-  geometry: {
-    type: "Point";
-    coordinates: [number, number]; // [lon, lat]
-  };
-  properties: {
-    fat_id: string;
-    fdt_id: string;
-    cluster_id: string;
-    cluster_name: string;
-    raw_kecamatan?: string;
-    raw_desa?: string;
-    capacity: number | string;
-    available: number | string;
-    utilization: number | string;
-    color: string;
-  };
-}
+// Compact format: [0: fat_id, 1: cluster_name, 2: lat, 3: lon, 4: isFull, 5: capacity, 6: available, 7: raw_kecamatan]
+export type CompactFat = [
+  string,
+  string,
+  number,
+  number,
+  number,
+  number | string,
+  number | string,
+  string,
+];
 
 export interface CoverageResult {
   status: "covered" | "full" | "uncovered";
   distanceMeters: number;
-  nearestFat: FatFeature | null;
+  nearestFat: CompactFat | null;
   userLat: number;
   userLon: number;
   addressQuery: string;
+}
+
+// Module-level in-memory cache so it only ever downloads once
+let globalFatCache: CompactFat[] | null = null;
+let globalFatPromise: Promise<CompactFat[]> | null = null;
+
+async function getOrFetchFatData(): Promise<CompactFat[]> {
+  if (globalFatCache && globalFatCache.length > 0) {
+    return globalFatCache;
+  }
+  if (!globalFatPromise) {
+    globalFatPromise = fetch("/data/fat_compact.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("Gagal mengunduh data jangkauan FAT");
+        return res.json();
+      })
+      .then((data: CompactFat[]) => {
+        globalFatCache = data;
+        return data;
+      })
+      .catch((err) => {
+        globalFatPromise = null;
+        throw err;
+      });
+  }
+  return globalFatPromise;
 }
 
 // Haversine formula for distance in meters
@@ -82,32 +99,39 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
   const userMarkerRef = useRef<Marker | null>(null);
   const coverageCircleRef = useRef<Circle | null>(null);
   const connectionLineRef = useRef<Polyline | null>(null);
+  const pendingSearchRef = useRef<{ lat: number; lon: number; text: string } | null>(null);
 
-  const [fatData, setFatData] = useState<FatFeature[]>([]);
-  const [dataLoading, setDataLoading] = useState(true);
+  const [fatData, setFatData] = useState<CompactFat[]>(() => globalFatCache || []);
+  const [dataLoading, setDataLoading] = useState(() => !globalFatCache);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearching, setIsSearching] = useState(false);
   const [result, setResult] = useState<CoverageResult | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // 1. Fetch GeoJSON FAT points on mount
+  // 1. Load compact FAT data immediately
   useEffect(() => {
     let isMounted = true;
-    async function loadFatGeoJson() {
-      try {
-        const res = await fetch("/data/fat_points.geojson");
-        if (!res.ok) throw new Error("Gagal mengunduh data jangkauan FAT");
-        const json = await res.json();
-        if (isMounted && json && Array.isArray(json.features)) {
-          setFatData(json.features as FatFeature[]);
+
+    getOrFetchFatData()
+      .then((data) => {
+        if (!isMounted) return;
+        setFatData(data);
+        setDataLoading(false);
+
+        // If user already clicked or searched while loading, immediately process!
+        if (pendingSearchRef.current) {
+          const pending = pendingSearchRef.current;
+          pendingSearchRef.current = null;
+          calculateAndDisplayCoverage(pending.lat, pending.lon, pending.text, data);
         }
-      } catch (err) {
-        console.error("Error loading FAT data:", err);
-      } finally {
-        if (isMounted) setDataLoading(false);
-      }
-    }
-    loadFatGeoJson();
+      })
+      .catch((err) => {
+        if (!isMounted) return;
+        console.error("Error loading compact FAT data:", err);
+        setDataLoading(false);
+        setErrorMessage("Gagal memuat data jaringan. Pastikan server lokal aktif.");
+      });
+
     return () => {
       isMounted = false;
     };
@@ -155,7 +179,7 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     };
   }, []);
 
-  // 3. Render nearby FAT markers when data or location changes
+  // 3. Render nearby FAT markers when data or result changes
   useEffect(() => {
     if (!mapInstanceRef.current || !fatData.length) return;
 
@@ -167,30 +191,17 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
 
       layer.clearLayers();
 
-      // Color mapping for utilization
-      const colorMap: Record<string, string> = {
-        green: "#10b981",
-        lightgreen: "#34d399",
-        yellow: "#f59e0b",
-        orange: "#f97316",
-        red: "#ef4444",
-        black: "#1e293b",
-        gray: "#8b5cf6", // MyRepublic Purple accent
-      };
-
-      // Determine display center
       const center = result ? [result.userLat, result.userLon] : [-7.4241, 109.2302];
 
-      // Filter to nearby points (within ~4 km) to keep rendering ultra-smooth
+      // Filter nearby points (within ~4 km)
       const nearbyFats = fatData.filter((f) => {
-        const coords = f.geometry.coordinates;
-        const dist = getDistanceMeters(center[0]!, center[1]!, coords[1], coords[0]);
+        const dist = getDistanceMeters(center[0]!, center[1]!, f[2], f[3]);
         return dist <= 4000;
       });
 
       nearbyFats.forEach((fat) => {
-        const [lon, lat] = fat.geometry.coordinates;
-        const color = colorMap[fat.properties.color] || "#8b5cf6";
+        const [fatId, clusterName, lat, lon, isFull, capacity, available] = fat;
+        const color = isFull === 1 ? "#1e293b" : "#8b5cf6";
 
         const marker = L.circleMarker([lat, lon], {
           radius: 5,
@@ -203,9 +214,9 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
 
         marker.bindPopup(`
           <div style="font-family: sans-serif; font-size: 12px; line-height: 1.4; padding: 2px;">
-            <div style="font-weight: 800; color: #5b21b6; margin-bottom: 2px;">${fat.properties.fat_id}</div>
-            <div style="color: #475569; font-size: 11px;">Cluster: <strong>${fat.properties.cluster_name}</strong></div>
-            <div style="color: #64748b; font-size: 10px; margin-top: 4px;">Kapasitas: ${fat.properties.capacity} | Tersedia: ${fat.properties.available}</div>
+            <div style="font-weight: 800; color: #5b21b6; margin-bottom: 2px;">${fatId}</div>
+            <div style="color: #475569; font-size: 11px;">Cluster: <strong>${clusterName}</strong></div>
+            <div style="color: #64748b; font-size: 10px; margin-top: 4px;">Kapasitas: ${capacity} | Tersedia: ${available}</div>
           </div>
         `);
 
@@ -216,22 +227,20 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     drawFatMarkers();
   }, [fatData, result]);
 
-  // 4. Check coverage logic
-  async function performCoverageCheck(lat: number, lon: number, addressText: string) {
-    if (!fatData.length) {
-      setErrorMessage("Sedang memuat data jaringan FAT Purwokerto. Mohon tunggu sebentar...");
-      return;
-    }
+  // 4. Calculate coverage and update visual map
+  async function calculateAndDisplayCoverage(
+    lat: number,
+    lon: number,
+    addressText: string,
+    currentFatList: CompactFat[],
+  ) {
+    if (!currentFatList.length) return;
 
-    setErrorMessage(null);
-
-    // Find closest FAT using Haversine
-    let nearest: FatFeature | null = null;
+    let nearest: CompactFat | null = null;
     let minDistance = Infinity;
 
-    for (const fat of fatData) {
-      const [fLon, fLat] = fat.geometry.coordinates;
-      const dist = getDistanceMeters(lat, lon, fLat, fLon);
+    for (const fat of currentFatList) {
+      const dist = getDistanceMeters(lat, lon, fat[2], fat[3]);
       if (dist < minDistance) {
         minDistance = dist;
         nearest = fat;
@@ -239,10 +248,7 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     }
 
     const isWithinRadius = minDistance <= 150;
-    const isFull =
-      nearest?.properties.color === "black" ||
-      (typeof nearest?.properties.utilization === "number" &&
-        nearest.properties.utilization >= 100);
+    const isFull = nearest ? nearest[4] === 1 : false;
 
     let status: "covered" | "full" | "uncovered" = "uncovered";
     if (isWithinRadius) {
@@ -259,18 +265,17 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     };
 
     setResult(coverageResult);
+    setIsSearching(false);
 
     // Visual map update
     if (mapInstanceRef.current && typeof window !== "undefined") {
       const L = (await import("leaflet")).default;
       const map = mapInstanceRef.current;
 
-      // Remove existing user marker, circle, and polyline
       if (userMarkerRef.current) map.removeLayer(userMarkerRef.current);
       if (coverageCircleRef.current) map.removeLayer(coverageCircleRef.current);
       if (connectionLineRef.current) map.removeLayer(connectionLineRef.current);
 
-      // User location pin
       const userIcon = L.divIcon({
         html: `
           <div style="position: relative; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center;">
@@ -287,9 +292,9 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
       userMarker.bindPopup(`<strong>Lokasi Pengecekan</strong><br/>${addressText}`).openPopup();
       userMarkerRef.current = userMarker;
 
-      // 150m coverage radius circle
       const circleColor =
         status === "covered" ? "#10b981" : status === "full" ? "#f59e0b" : "#ef4444";
+
       const circle = L.circle([lat, lon], {
         radius: 150,
         color: circleColor,
@@ -300,13 +305,11 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
       }).addTo(map);
       coverageCircleRef.current = circle;
 
-      // Connection line to nearest FAT
       if (nearest) {
-        const [nLon, nLat] = nearest.geometry.coordinates;
         const line = L.polyline(
           [
             [lat, lon],
-            [nLat, nLon],
+            [nearest[2], nearest[3]],
           ],
           {
             color: circleColor,
@@ -317,12 +320,25 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         connectionLineRef.current = line;
       }
 
-      // Fly map smoothly to location
       map.flyTo([lat, lon], 16, { duration: 1.2 });
     }
   }
 
-  // Handle text address search via Nominatim Geocoding
+  // Check coverage entry point
+  async function performCoverageCheck(lat: number, lon: number, addressText: string) {
+    setErrorMessage(null);
+
+    // If data is still loading, store pending search so it executes the instant it finishes!
+    if (!fatData.length) {
+      pendingSearchRef.current = { lat, lon, text: addressText };
+      setIsSearching(true);
+      return;
+    }
+
+    await calculateAndDisplayCoverage(lat, lon, addressText, fatData);
+  }
+
+  // Handle address search via Nominatim
   async function handleAddressSearch(e?: React.FormEvent) {
     if (e) e.preventDefault();
     const query = searchQuery.trim();
@@ -335,7 +351,6 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     setErrorMessage(null);
 
     try {
-      // Append Purwokerto, Banyumas to keep geocoding localized
       const localizedQuery = query.toLowerCase().includes("purwokerto")
         ? `${query}, Indonesia`
         : `${query}, Purwokerto, Banyumas, Indonesia`;
@@ -345,9 +360,7 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
       )}&limit=1`;
 
       const res = await fetch(endpoint, {
-        headers: {
-          "Accept-Language": "id",
-        },
+        headers: { "Accept-Language": "id" },
       });
 
       if (!res.ok) throw new Error("Gagal menghubungi server pencari alamat.");
@@ -358,15 +371,15 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         const lon = parseFloat(data[0].lon);
         await performCoverageCheck(lat, lon, query);
       } else {
+        setIsSearching(false);
         setErrorMessage(
           `Alamat "${query}" tidak ditemukan di peta. Coba masukkan nama jalan utama atau kelurahan terdekat.`,
         );
       }
     } catch (err) {
       console.error("Geocoding error:", err);
-      setErrorMessage("Terjadi kesalahan saat mencari alamat. Periksa koneksi internet Anda.");
-    } finally {
       setIsSearching(false);
+      setErrorMessage("Terjadi kesalahan saat mencari alamat. Periksa koneksi internet Anda.");
     }
   }
 
@@ -385,7 +398,6 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         const { latitude, longitude } = pos.coords;
         setSearchQuery("Titik Lokasi GPS Saya");
         await performCoverageCheck(latitude, longitude, "Lokasi GPS Saya");
-        setIsSearching(false);
       },
       (err) => {
         setIsSearching(false);
@@ -402,41 +414,40 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
   // Quick area chips click
   function handleChipClick(areaName: string) {
     setSearchQuery(areaName);
-    const fakeEvent = { preventDefault: () => {} } as React.FormEvent;
-    // Timeout to allow state to settle
-    setTimeout(() => {
-      const formQuery = `${areaName}, Purwokerto`;
-      setIsSearching(true);
-      setErrorMessage(null);
+    setIsSearching(true);
+    setErrorMessage(null);
 
-      fetch(
-        `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
-          `${formQuery}, Banyumas, Indonesia`,
-        )}&limit=1`,
-        { headers: { "Accept-Language": "id" } },
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          if (data && data[0]?.lat && data[0]?.lon) {
-            performCoverageCheck(parseFloat(data[0].lat), parseFloat(data[0].lon), areaName);
-          } else {
-            setErrorMessage(`Area ${areaName} tidak ditemukan di peta.`);
-          }
-        })
-        .catch(() => setErrorMessage("Gagal mencari area."))
-        .finally(() => setIsSearching(false));
-    }, 50);
+    const formQuery = `${areaName}, Purwokerto, Banyumas, Indonesia`;
+    fetch(
+      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
+        formQuery,
+      )}&limit=1`,
+      { headers: { "Accept-Language": "id" } },
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data[0]?.lat && data[0]?.lon) {
+          performCoverageCheck(parseFloat(data[0].lat), parseFloat(data[0].lon), areaName);
+        } else {
+          setIsSearching(false);
+          setErrorMessage(`Area ${areaName} tidak ditemukan di peta.`);
+        }
+      })
+      .catch(() => {
+        setIsSearching(false);
+        setErrorMessage("Gagal mencari area.");
+      });
   }
 
-  // Generate WhatsApp registration link with auto-detected FAT ID
+  // WhatsApp registration URL
   const getWhatsAppRegistrationUrl = () => {
     if (!result || !result.nearestFat) return "#";
-    const fat = result.nearestFat.properties;
+    const [fatId, clusterName] = result.nearestFat;
     const msg =
       result.status === "covered"
-        ? `Halo Admin MyRepublic Purwokerto, saya sudah cek area di: "${result.addressQuery}". Hasil tercover tiang FAT: *${fat.fat_id}* (${fat.cluster_name}, jarak ~${result.distanceMeters}m). Saya ingin mendaftar pasang baru.`
+        ? `Halo Admin MyRepublic Purwokerto, saya sudah cek area di: "${result.addressQuery}". Hasil tercover tiang FAT: *${fatId}* (${clusterName}, jarak ~${result.distanceMeters}m). Saya ingin mendaftar pasang baru.`
         : result.status === "full"
-          ? `Halo Admin MyRepublic Purwokerto, alamat saya di: "${result.addressQuery}" tercover tiang *${fat.fat_id}* (${fat.cluster_name}), namun port tercatat penuh. Mohon info antrian / jadwal penambahan kapasitas port.`
+          ? `Halo Admin MyRepublic Purwokerto, alamat saya di: "${result.addressQuery}" tercover tiang *${fatId}* (${clusterName}), namun port tercatat penuh. Mohon info antrian / jadwal penambahan kapasitas port.`
           : `Halo Admin MyRepublic Purwokerto, alamat saya di: "${result.addressQuery}" berjarak ~${result.distanceMeters}m dari tiang terdekat. Apakah ada rencana perluasan jaringan ke lokasi saya?`;
 
     return `https://wa.me/6281234567890?text=${encodeURIComponent(msg)}`;
@@ -465,14 +476,14 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
               variant="brand"
               size="lg"
               className="h-12 flex-1 sm:flex-none font-bold gap-2 px-6"
-              disabled={isSearching || dataLoading}
+              disabled={isSearching}
             >
               {isSearching ? (
                 <Loader2 className="size-4 animate-spin" />
               ) : (
                 <Search className="size-4" />
               )}
-              <span>{isSearching ? "Mencari..." : "Cek Area"}</span>
+              <span>{isSearching ? "Mengecek..." : "Cek Area"}</span>
             </Button>
 
             <Button
@@ -480,7 +491,7 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
               variant="outline"
               size="lg"
               onClick={handleGpsLocation}
-              disabled={isSearching || dataLoading}
+              disabled={isSearching}
               title="Gunakan Titik Lokasi GPS Saya"
               className="h-12 px-3.5 shrink-0 hover:border-brand hover:text-brand"
             >
@@ -499,17 +510,18 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
               key={area}
               type="button"
               onClick={() => handleChipClick(area)}
-              className="rounded-full border border-border bg-card px-2.5 py-1 text-[11px] font-medium text-foreground transition-all hover:border-brand hover:bg-brand/5 hover:text-brand"
+              disabled={isSearching}
+              className="rounded-full border border-border bg-card px-2.5 py-1 text-[11px] font-medium text-foreground transition-all hover:border-brand hover:bg-brand/5 hover:text-brand disabled:opacity-50 cursor-pointer"
             >
               {area}
             </button>
           ))}
         </div>
 
-        {/* Status / Error feedback */}
-        {dataLoading ? (
-          <p className="flex items-center gap-1.5 text-xs text-muted-foreground animate-pulse">
-            <Radio className="size-3.5 text-brand animate-spin" /> Memuat 9.586 titik tiang fiber
+        {/* Loading Indicator for initial dataset */}
+        {dataLoading && isSearching ? (
+          <p className="flex items-center gap-1.5 text-xs text-brand font-medium animate-pulse">
+            <Loader2 className="size-3.5 animate-spin" /> Menghubungkan ke 9.586 titik tiang fiber
             Purwokerto...
           </p>
         ) : null}
@@ -576,14 +588,16 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
                 {result.nearestFat ? (
                   <div className="mt-2.5 flex flex-wrap gap-2 text-[11px] font-mono">
                     <span className="rounded bg-background/80 px-2 py-0.5 font-bold border border-current/20">
-                      FAT ID: {result.nearestFat.properties.fat_id}
+                      FAT ID: {result.nearestFat[0]}
                     </span>
                     <span className="rounded bg-background/80 px-2 py-0.5 font-bold border border-current/20">
-                      Cluster: {result.nearestFat.properties.cluster_name}
+                      Cluster: {result.nearestFat[1]}
                     </span>
-                    <span className="rounded bg-background/80 px-2 py-0.5 border border-current/20">
-                      Kec: {result.nearestFat.properties.raw_kecamatan || "Purwokerto"}
-                    </span>
+                    {result.nearestFat[7] ? (
+                      <span className="rounded bg-background/80 px-2 py-0.5 border border-current/20">
+                        Kec: {result.nearestFat[7]}
+                      </span>
+                    ) : null}
                   </div>
                 ) : null}
               </div>
@@ -616,9 +630,6 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
 
         {/* Map Legend Overlay */}
         <div className="absolute bottom-3 left-3 z-20 flex flex-wrap items-center gap-3 rounded-md border border-border bg-background/90 p-2 text-[10px] font-bold backdrop-blur shadow-sm pointer-events-auto">
-          <span className="flex items-center gap-1.5 text-muted-foreground">
-            <span className="size-2.5 rounded-full bg-emerald-500"></span> Port Tersedia
-          </span>
           <span className="flex items-center gap-1.5 text-muted-foreground">
             <span className="size-2.5 rounded-full bg-purple-600"></span> Tiang FAT MyRepublic
           </span>
