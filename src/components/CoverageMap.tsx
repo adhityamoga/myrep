@@ -256,7 +256,11 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
             <div style="color: #334155; font-size: 11px;">Cluster: <strong>${clusterName}</strong></div>
             <div style="color: #64748b; font-size: 11px;">Kecamatan: <strong>${rawKec || "-"}</strong></div>
             <div style="color: #64748b; font-size: 10px; margin-top: 3px; font-weight: 600;">
-              Status: <span style="color: ${isFull === 1 ? "#ef4444" : "#10b981"}">${isFull === 1 ? "Port Penuh" : "Tersedia"}</span> (Port: ${available}/${capacity})
+              Status: <span style="color: ${isFull === 1 ? "#ef4444" : "#10b981"}">${isFull === 1 ? "Port Penuh" : "Siap Pasang"}</span>${
+                capacity && capacity !== "N/A" && available && available !== "N/A"
+                  ? ` (Port: ${available}/${capacity})`
+                  : " (Kapasitas: 8 Port)"
+              }
             </div>
           </div>
         `);

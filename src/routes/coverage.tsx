@@ -689,13 +689,17 @@ function CoveragePage() {
                 <div className="rounded bg-muted/50 p-2">
                   <span className="text-[10px] text-muted-foreground font-medium">Kapasitas</span>
                   <p className="font-bold font-mono text-foreground">
-                    {selectedFat.properties.capacity} Port
+                    {selectedFat.properties.capacity && selectedFat.properties.capacity !== "N/A"
+                      ? `${selectedFat.properties.capacity} Port`
+                      : "8 Port"}
                   </p>
                 </div>
                 <div className="rounded bg-muted/50 p-2">
                   <span className="text-[10px] text-muted-foreground font-medium">Tersedia</span>
                   <p className="font-bold font-mono text-emerald-600">
-                    {selectedFat.properties.available} Port
+                    {selectedFat.properties.available && selectedFat.properties.available !== "N/A"
+                      ? `${selectedFat.properties.available} Port`
+                      : "Siap Pasang"}
                   </p>
                 </div>
                 <div className="rounded bg-muted/50 p-2">
