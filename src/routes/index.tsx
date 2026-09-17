@@ -637,8 +637,7 @@ function CoverageChecker() {
             Apakah Rumahmu Sudah Tercover?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Sistem otomatis terhubung dengan 9.586 titik tiang FAT fiber optic MyRepublic di seluruh
-            wilayah Purwokerto dan sekitarnya.
+            Sistem terhubung langsung dengan <strong>9.586 titik tiang FAT</strong> &amp; <strong>818 cluster</strong> di <strong>25 kecamatan</strong> se-Kabupaten Banyumas (Purwokerto Kota, Wangon, Cilongok, Rawalo, Jatilawang, Ajibarang, Baturraden, Sokaraja, Sumbang, dan sekitarnya).
           </p>
         </div>
 

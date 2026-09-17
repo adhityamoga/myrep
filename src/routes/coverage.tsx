@@ -121,20 +121,33 @@ function CoveragePage() {
 
   const [openKecamatan, setOpenKecamatan] = useState<Record<string, boolean>>({});
 
-  // 1. Fetch GeoJSON
+  // 1. Fetch compact FAT data (<900KB instead of 4.8MB)
   useEffect(() => {
     let active = true;
     async function loadData() {
       try {
-        const [fatRes, fdtRes] = await Promise.all([
-          fetch("/data/fat_points.geojson"),
-          fetch("/data/fdt_points.geojson"),
-        ]);
-        const fatJson = await fatRes.json();
-        const fdtJson = await fdtRes.json();
-        if (active) {
-          if (fatJson?.features) setFatList(fatJson.features as FatFeature[]);
-          if (fdtJson?.features) setFdtList(fdtJson.features as FdtFeature[]);
+        const res = await fetch("/data/fat_compact.json");
+        const compactData = await res.json();
+        if (active && Array.isArray(compactData)) {
+          const mappedFats: FatFeature[] = compactData.map((f: any) => ({
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [f[3], f[2]], // [lon, lat]
+            },
+            properties: {
+              fat_id: f[0],
+              fdt_id: f[0].split(".")[0] || "FDT",
+              cluster_id: f[1],
+              cluster_name: f[1],
+              raw_kecamatan: f[7] || "PURWOKERTO",
+              capacity: f[5],
+              available: f[6],
+              utilization: f[4] === 1 ? 100 : 50,
+              color: f[4] === 1 ? "black" : "green",
+            },
+          }));
+          setFatList(mappedFats);
         }
       } catch (err) {
         console.error("Gagal memuat data GIS:", err);
