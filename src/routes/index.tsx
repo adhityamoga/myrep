@@ -28,6 +28,7 @@ import { FormEvent, useState, useEffect, useRef } from "react";
 import customerImage from "@/assets/myrepublic-customer.png";
 import gaugeGray from "@/assets/speedometer-gray.png";
 import gaugePurple from "@/assets/speedometer-purple.png";
+import waRocketCta from "@/assets/wa-rocket-cta.png";
 import {
   Accordion,
   AccordionContent,
@@ -820,24 +821,22 @@ function Faq() {
 
 function FloatingWhatsApp() {
   return (
-    <aside aria-label="Kontak WhatsApp" className="fixed bottom-6 right-6 z-50">
+    <aside
+      aria-label="Kontak WhatsApp"
+      className="fixed bottom-5 right-5 z-50 sm:bottom-6 sm:right-6"
+    >
       <a
         href="https://wa.me/6281234567890?text=Halo%20Admin%20MyRepublic%20Purwokerto%2C%20saya%20ingin%20tanya%20info%20paket%20dan%20cek%20area"
         target="_blank"
         rel="noreferrer"
         aria-label="Chat WhatsApp Sales Purwokerto"
-        className="group flex items-center gap-3 rounded-full bg-[#25D366] px-4 py-3 text-white shadow-2xl transition-all duration-300 hover:bg-[#20ba5a] hover:scale-105 active:scale-95"
+        className="group relative block transition-transform duration-300 hover:scale-110 active:scale-95"
       >
-        <span className="relative flex size-6 items-center justify-center">
-          <MessageCircle className="size-6 fill-current" />
-          <span className="absolute -top-1 -right-1 flex size-2.5">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-white opacity-75"></span>
-            <span className="relative inline-flex size-2.5 rounded-full bg-signal"></span>
-          </span>
-        </span>
-        <span className="hidden text-xs font-black tracking-wide sm:inline">
-          Chat Sales Purwokerto
-        </span>
+        <img
+          src={waRocketCta}
+          alt="Chat WhatsApp MyRepublic Purwokerto"
+          className="w-16 sm:w-20 drop-shadow-2xl transition-transform duration-300 group-hover:-translate-y-1.5"
+        />
       </a>
     </aside>
   );
