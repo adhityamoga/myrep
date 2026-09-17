@@ -222,7 +222,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
@@ -253,19 +255,33 @@
 }
 
 @property --fill-angle {
-  syntax: '<angle>';
+  syntax: "<angle>";
   inherits: false;
   initial-value: 0deg;
 }
 
 @keyframes mask-fill {
-  0% { --fill-angle: 0deg; }
-  30% { --fill-angle: 135deg; }
-  50% { --fill-angle: 195deg; }
-  65% { --fill-angle: 170deg; }
-  75% { --fill-angle: 185deg; }
-  85% { --fill-angle: 177deg; }
-  100% { --fill-angle: 180deg; }
+  0% {
+    --fill-angle: 0deg;
+  }
+  30% {
+    --fill-angle: 135deg;
+  }
+  50% {
+    --fill-angle: 195deg;
+  }
+  65% {
+    --fill-angle: 170deg;
+  }
+  75% {
+    --fill-angle: 185deg;
+  }
+  85% {
+    --fill-angle: 177deg;
+  }
+  100% {
+    --fill-angle: 180deg;
+  }
 }
 
 @utility animate-needle {
@@ -277,6 +293,16 @@
 }
 
 @utility gauge-mask {
-  -webkit-mask-image: conic-gradient(from 225deg, black 0deg, black var(--fill-angle), transparent var(--fill-angle));
-  mask-image: conic-gradient(from 225deg, black 0deg, black var(--fill-angle), transparent var(--fill-angle));
+  -webkit-mask-image: conic-gradient(
+    from 225deg,
+    black 0deg,
+    black var(--fill-angle),
+    transparent var(--fill-angle)
+  );
+  mask-image: conic-gradient(
+    from 225deg,
+    black 0deg,
+    black var(--fill-angle),
+    transparent var(--fill-angle)
+  );
 }
