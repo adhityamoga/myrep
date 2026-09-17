@@ -214,18 +214,27 @@ function CoveragePage() {
 
       layer.clearLayers();
 
+      const rocketIcon = L.icon({
+        iconUrl: "/image/rocket_marker_24.png",
+        iconSize: [22, 22],
+        iconAnchor: [11, 11],
+        popupAnchor: [0, -10],
+      });
+
+      const rocketFullIcon = L.icon({
+        iconUrl: "/image/rocket_marker_24.png",
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+        popupAnchor: [0, -9],
+        className: "grayscale opacity-50",
+      });
+
       fatList.forEach((fat) => {
         const [lon, lat] = fat.geometry.coordinates;
-        const color = colorMap[fat.properties.color] || "#8b5cf6";
+        const isFull = fat.properties.color === "black" || fat.properties.utilization === 100;
+        const icon = isFull ? rocketFullIcon : rocketIcon;
 
-        const marker = L.circleMarker([lat, lon], {
-          radius: 5,
-          fillColor: color,
-          color: "#ffffff",
-          weight: 1.5,
-          opacity: 1,
-          fillOpacity: 0.85,
-        });
+        const marker = L.marker([lat, lon], { icon });
 
         marker.on("click", () => {
           setSelectedFat(fat);
@@ -640,16 +649,10 @@ function CoveragePage() {
           {/* Map Legend Overlay */}
           <div className="absolute bottom-4 left-4 z-20 flex flex-wrap items-center gap-3 rounded-md border border-border bg-card/90 px-3 py-2 text-xs font-bold backdrop-blur shadow-sm">
             <span className="flex items-center gap-1.5 text-muted-foreground">
-              <span className="size-2.5 rounded-full bg-emerald-500"></span> Port Tersedia
+              <img src="/image/rocket_marker_24.png" alt="FAT" className="size-4 shrink-0 object-contain" /> Port Tersedia
             </span>
             <span className="flex items-center gap-1.5 text-muted-foreground">
-              <span className="size-2.5 rounded-full bg-amber-500"></span> Utilisasi Sedang
-            </span>
-            <span className="flex items-center gap-1.5 text-muted-foreground">
-              <span className="size-2.5 rounded-full bg-purple-600"></span> Fiber Active
-            </span>
-            <span className="flex items-center gap-1.5 text-muted-foreground">
-              <span className="size-2.5 rounded-full bg-slate-800"></span> Port Penuh
+              <img src="/image/rocket_marker_24.png" alt="Full" className="size-3.5 shrink-0 object-contain grayscale opacity-50" /> Port Penuh
             </span>
           </div>
 

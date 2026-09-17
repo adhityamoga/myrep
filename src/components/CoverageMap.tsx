@@ -224,23 +224,35 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         }
       }
 
+      const iconSize = zoom >= 16 ? 24 : zoom >= 14 ? 20 : 16;
+      const rocketIcon = L.icon({
+        iconUrl: "/image/rocket_marker_24.png",
+        iconSize: [iconSize, iconSize],
+        iconAnchor: [iconSize / 2, iconSize / 2],
+        popupAnchor: [0, -Math.round(iconSize / 2)],
+      });
+
+      const fullSize = Math.round(iconSize * 0.85);
+      const rocketFullIcon = L.icon({
+        iconUrl: "/image/rocket_marker_24.png",
+        iconSize: [fullSize, fullSize],
+        iconAnchor: [fullSize / 2, fullSize / 2],
+        popupAnchor: [0, -Math.round(fullSize / 2)],
+        className: "grayscale opacity-50",
+      });
+
       inViewFats.forEach((fat) => {
         const [fatId, clusterName, lat, lon, isFull, capacity, available, rawKec] = fat;
-        // Available: vibrant purple; Full: subtle slate
-        const color = isFull === 1 ? "#475569" : "#7c3aed";
+        const icon = isFull === 1 ? rocketFullIcon : rocketIcon;
 
-        const marker = L.circleMarker([lat, lon], {
-          radius: zoom >= 16 ? 5 : 3.5,
-          fillColor: color,
-          color: "#ffffff",
-          weight: 1.2,
-          opacity: 0.95,
-          fillOpacity: 0.85,
-        });
+        const marker = L.marker([lat, lon], { icon });
 
         marker.bindPopup(`
           <div style="font-family: system-ui, sans-serif; font-size: 12px; line-height: 1.4; padding: 2px;">
-            <div style="font-weight: 800; font-family: monospace; color: #5b21b6; margin-bottom: 2px;">${fatId}</div>
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 3px;">
+              <img src="/image/rocket_marker_24.png" style="width: 16px; height: 16px;" alt="Rocket FAT" />
+              <div style="font-weight: 800; font-family: monospace; color: #5b21b6;">${fatId}</div>
+            </div>
             <div style="color: #334155; font-size: 11px;">Cluster: <strong>${clusterName}</strong></div>
             <div style="color: #64748b; font-size: 11px;">Kecamatan: <strong>${rawKec || "-"}</strong></div>
             <div style="color: #64748b; font-size: 10px; margin-top: 3px; font-weight: 600;">
@@ -858,10 +870,10 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
           {/* Subtle Clean Legend */}
           <div className="flex items-center gap-3 rounded-xl border border-border/60 bg-card/90 px-3 py-1.5 text-[11px] font-medium backdrop-blur-md shadow-sm">
             <span className="flex items-center gap-1.5 text-muted-foreground">
-              <span className="size-2 rounded-full bg-purple-600 shadow-[0_0_6px_rgba(147,51,234,0.6)]"></span> Tiang FAT Tersedia
+              <img src="/image/rocket_marker_24.png" alt="FAT" className="size-4 shrink-0 object-contain" /> Tiang FAT Tersedia
             </span>
             <span className="flex items-center gap-1.5 text-muted-foreground">
-              <span className="size-2 rounded-full bg-slate-600"></span> Port Penuh
+              <img src="/image/rocket_marker_24.png" alt="Full" className="size-3.5 shrink-0 object-contain grayscale opacity-50" /> Port Penuh
             </span>
           </div>
 
