@@ -3,6 +3,7 @@ import {
   CheckCircle2,
   ChevronDown,
   Compass,
+  Crosshair,
   ExternalLink,
   Info,
   Layers,
@@ -14,9 +15,10 @@ import {
   Radio,
   Search,
   Sparkles,
+  X,
   XCircle,
 } from "lucide-react";
-import type { Map as LeafletMap, LayerGroup, Marker, Circle, Polyline, CircleMarker } from "leaflet";
+import type { Map as LeafletMap, LayerGroup, Marker, Circle, Polyline } from "leaflet";
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -132,23 +134,6 @@ export function getDistanceMeters(lat1: number, lon1: number, lat2: number, lon2
   return R * c;
 }
 
-// Quick filter chips for top areas
-const HIGHLIGHTED_KECAMATANS = [
-  "PURWOKERTO SELATAN",
-  "PURWOKERTO TIMUR",
-  "PURWOKERTO UTARA",
-  "PURWOKERTO BARAT",
-  "WANGON",
-  "RAWALO",
-  "JATILAWANG",
-  "CILONGOK",
-  "AJIBARANG",
-  "BATURRADEN",
-  "SOKARAJA",
-  "SUMBANG",
-  "PATIKRAJA",
-];
-
 interface CoverageMapProps {
   className?: string;
   showFullPortalLink?: boolean;
@@ -170,21 +155,19 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
   const [isSearching, setIsSearching] = useState(false);
   const [result, setResult] = useState<CoverageResult | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
-  // Selected Kecamatan for quick explorer
   const [selectedKecamatan, setSelectedKecamatan] = useState<string>("ALL");
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
-  // Filtered clusters for the selected kecamatan
-  const activeClusters = useMemo(() => {
-    if (!metadata) return [];
-    if (selectedKecamatan === "ALL") {
-      // Pick top 10 well-known clusters
-      return metadata.clusters.slice(0, 8);
-    }
-    return metadata.clusters.filter((c) => c.kec === selectedKecamatan).slice(0, 10);
-  }, [metadata, selectedKecamatan]);
+  // Search input suggestions: match against 818 clusters in Banyumas
+  const searchSuggestions = useMemo(() => {
+    if (!metadata || !searchQuery || searchQuery.length < 2) return [];
+    const q = searchQuery.toLowerCase().trim();
+    return metadata.clusters
+      .filter((c) => c.name.toLowerCase().includes(q) || (c.kel && c.kel.toLowerCase().includes(q)))
+      .slice(0, 5);
+  }, [metadata, searchQuery]);
 
-  // Viewport update callback: renders FAT markers inside current screen bounds
+  // Viewport update callback: renders delicate FAT markers inside current screen bounds
   const updateVisibleMarkers = useCallback(() => {
     const map = mapInstanceRef.current;
     const layer = markersLayerRef.current;
@@ -196,13 +179,13 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
       const zoom = map.getZoom();
       const bounds = map.getBounds();
 
-      // Zoom < 12: render cluster markers from metadata to prevent map lag
+      // Zoom < 12: render subtle cluster nodes to avoid clutter
       if (zoom < 12 && metadata && metadata.clusters.length > 0) {
         metadata.clusters.forEach((cluster) => {
           if (bounds.contains([cluster.lat, cluster.lon])) {
             const marker = L.circleMarker([cluster.lat, cluster.lon], {
-              radius: Math.min(10, Math.max(5, Math.sqrt(cluster.fats) * 1.5)),
-              fillColor: "#7c3aed",
+              radius: Math.min(8, Math.max(4, Math.sqrt(cluster.fats) * 1.2)),
+              fillColor: "#8b5cf6",
               color: "#ffffff",
               weight: 1.5,
               opacity: 0.9,
@@ -210,11 +193,11 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
             });
 
             marker.bindPopup(`
-              <div style="font-family: sans-serif; font-size: 12px; line-height: 1.4; padding: 2px;">
-                <div style="font-weight: 800; color: #5b21b6;">Cluster: ${cluster.name}</div>
-                <div style="color: #475569; font-size: 11px;">Kec. ${cluster.kec}${cluster.kel ? ` • Kel. ${cluster.kel}` : ""}</div>
-                <div style="color: #6d28d9; font-weight: 600; font-size: 11px; margin-top: 4px;">${cluster.fats} Tiang FAT • ${cluster.hps} Port HP</div>
-                <div style="color: #64748b; font-size: 10px; margin-top: 2px;">Zoom lebih dekat untuk melihat tiang fiber</div>
+              <div style="font-family: system-ui, sans-serif; font-size: 12px; line-height: 1.4; padding: 3px;">
+                <div style="font-weight: 800; color: #5b21b6;">${cluster.name}</div>
+                <div style="color: #64748b; font-size: 11px;">Kec. ${cluster.kec}${cluster.kel ? ` • Kel. ${cluster.kel}` : ""}</div>
+                <div style="color: #7c3aed; font-weight: 600; font-size: 11px; margin-top: 3px;">${cluster.fats} Tiang FAT • ${cluster.hps} Port</div>
+                <div style="color: #94a3b8; font-size: 10px; margin-top: 2px;">Perbesar peta untuk melihat titik tiang fiber</div>
               </div>
             `);
             layer.addLayer(marker);
@@ -223,8 +206,8 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         return;
       }
 
-      // Zoom >= 12: render individual FAT points inside viewport (with 15% padding)
-      const paddedBounds = bounds.pad(0.15);
+      // Zoom >= 12: render individual FAT points inside viewport with refined delicate styling
+      const paddedBounds = bounds.pad(0.12);
       const south = paddedBounds.getSouth();
       const north = paddedBounds.getNorth();
       const west = paddedBounds.getWest();
@@ -237,29 +220,32 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         const lon = f[3];
         if (lat >= south && lat <= north && lon >= west && lon <= east) {
           inViewFats.push(f);
-          if (inViewFats.length >= 1000) break; // Keep DOM fast and 60fps
+          if (inViewFats.length >= 1000) break; // Keep rendering silky smooth at 60fps
         }
       }
 
       inViewFats.forEach((fat) => {
         const [fatId, clusterName, lat, lon, isFull, capacity, available, rawKec] = fat;
-        const color = isFull === 1 ? "#1e293b" : "#8b5cf6";
+        // Available: vibrant purple; Full: subtle slate
+        const color = isFull === 1 ? "#475569" : "#7c3aed";
 
         const marker = L.circleMarker([lat, lon], {
-          radius: zoom >= 15 ? 6 : 4.5,
+          radius: zoom >= 16 ? 5 : 3.5,
           fillColor: color,
           color: "#ffffff",
-          weight: 1.5,
-          opacity: 1,
+          weight: 1.2,
+          opacity: 0.95,
           fillOpacity: 0.85,
         });
 
         marker.bindPopup(`
-          <div style="font-family: sans-serif; font-size: 12px; line-height: 1.4; padding: 2px;">
-            <div style="font-weight: 800; color: #5b21b6; margin-bottom: 2px;">${fatId}</div>
-            <div style="color: #475569; font-size: 11px;">Cluster: <strong>${clusterName}</strong></div>
+          <div style="font-family: system-ui, sans-serif; font-size: 12px; line-height: 1.4; padding: 2px;">
+            <div style="font-weight: 800; font-family: monospace; color: #5b21b6; margin-bottom: 2px;">${fatId}</div>
+            <div style="color: #334155; font-size: 11px;">Cluster: <strong>${clusterName}</strong></div>
             <div style="color: #64748b; font-size: 11px;">Kecamatan: <strong>${rawKec || "-"}</strong></div>
-            <div style="color: #64748b; font-size: 10px; margin-top: 4px;">Kapasitas: ${capacity} | Tersedia: ${available}</div>
+            <div style="color: #64748b; font-size: 10px; margin-top: 3px; font-weight: 600;">
+              Status: <span style="color: ${isFull === 1 ? "#ef4444" : "#10b981"}">${isFull === 1 ? "Port Penuh" : "Tersedia"}</span> (Port: ${available}/${capacity})
+            </div>
           </div>
         `);
 
@@ -268,7 +254,7 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     });
   }, [fatData, metadata]);
 
-  // 1. Load compact FAT data & metadata in parallel
+  // 1. Fetch compact dataset and metadata
   useEffect(() => {
     let isMounted = true;
 
@@ -279,7 +265,6 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         setMetadata(meta);
         setDataLoading(false);
 
-        // If user already clicked or searched while loading, process now!
         if (pendingSearchRef.current) {
           const pending = pendingSearchRef.current;
           pendingSearchRef.current = null;
@@ -292,7 +277,7 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         if (!isMounted) return;
         console.error("Error loading coverage data:", err);
         setDataLoading(false);
-        setErrorMessage("Gagal memuat data jaringan. Pastikan koneksi internet stabil.");
+        setErrorMessage("Gagal memuat peta jaringan. Silakan refresh halaman.");
       });
 
     return () => {
@@ -300,7 +285,7 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     };
   }, [updateVisibleMarkers]);
 
-  // 2. Initialize Leaflet map (client-side only)
+  // 2. Initialize Leaflet map with clean CARTO Voyager tiles (no ugly raw raster tiles)
   useEffect(() => {
     if (typeof window === "undefined" || !mapContainerRef.current) return;
 
@@ -314,24 +299,28 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         mapInstanceRef.current.remove();
       }
 
-      // Banyumas Raya center coordinates
+      // Banyumas center
       map = L.map(mapContainerRef.current, {
         center: [-7.435, 109.23],
         zoom: 13,
-        zoomControl: true,
+        zoomControl: false, // Use custom placed zoom controls
         preferCanvas: true,
       });
 
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      // Clean OpenStreetMap tiles with modern subtle CSS styling (no API key / no watermark)
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
         maxZoom: 19,
+        className: "map-tiles-modern",
       }).addTo(map);
+
+      // Custom zoom control in bottom right
+      L.control.zoom({ position: "bottomright" }).addTo(map);
 
       const markersGroup = L.layerGroup().addTo(map);
       markersLayerRef.current = markersGroup;
       mapInstanceRef.current = map;
 
-      // Update markers whenever user moves or zooms
       map.on("moveend zoomend", () => {
         updateVisibleMarkers();
       });
@@ -349,14 +338,13 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     };
   }, [updateVisibleMarkers]);
 
-  // Re-run viewport markers whenever fatData updates
   useEffect(() => {
     if (mapInstanceRef.current && fatData.length) {
       updateVisibleMarkers();
     }
   }, [fatData, updateVisibleMarkers]);
 
-  // Calculate coverage and update visual map elements
+  // Calculate coverage and visually position pin
   async function calculateAndDisplayCoverage(
     lat: number,
     lon: number,
@@ -395,6 +383,7 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
 
     setResult(coverageResult);
     setIsSearching(false);
+    setShowSuggestions(false);
 
     // Visual map update
     if (mapInstanceRef.current) {
@@ -407,27 +396,27 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
 
       const userPin = L.divIcon({
         html: `
-          <div style="position: relative; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center;">
-            <div style="position: absolute; width: 100%; height: 100%; background: #a855f7; border-radius: 50%; opacity: 0.45; animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;"></div>
-            <div style="width: 16px; height: 16px; background: #7c3aed; border: 3px solid #ffffff; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.4);"></div>
+          <div style="position: relative; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; width: 100%; height: 100%; background: #9333ea; border-radius: 50%; opacity: 0.35; animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;"></div>
+            <div style="width: 14px; height: 14px; background: #7c3aed; border: 2.5px solid #ffffff; border-radius: 50%; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.5);"></div>
           </div>
         `,
         className: "custom-user-marker",
-        iconSize: [26, 26],
-        iconAnchor: [13, 13],
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
       });
 
       userMarkerRef.current = L.marker([lat, lon], { icon: userPin }).addTo(map);
 
       const circleColor =
-        status === "covered" ? "#10b981" : status === "full" ? "#f59e0b" : "#ef4444";
+        status === "covered" ? "#10b981" : status === "full" ? "#f59e0b" : "#f43f5e";
 
       const circle = L.circle([lat, lon], {
         radius: 150,
         color: circleColor,
         weight: 1.5,
         fillColor: circleColor,
-        fillOpacity: 0.12,
+        fillOpacity: 0.08,
         dashArray: "4, 6",
       }).addTo(map);
       coverageCircleRef.current = circle;
@@ -440,8 +429,8 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
           ],
           {
             color: circleColor,
-            weight: 2.5,
-            dashArray: "6, 6",
+            weight: 2,
+            dashArray: "4, 6",
           },
         ).addTo(map);
         connectionLineRef.current = line;
@@ -469,14 +458,15 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     if (e) e.preventDefault();
     const query = searchQuery.trim();
     if (!query) {
-      setErrorMessage("Silakan ketik nama jalan, perumahan, kelurahan, atau kecamatan di Banyumas.");
+      setErrorMessage("Ketik nama jalan, perumahan, atau desa yang ingin dicek.");
       return;
     }
 
     setIsSearching(true);
     setErrorMessage(null);
+    setShowSuggestions(false);
 
-    // 1. Fast exact/fuzzy match against 818 clusters or 25 kecamatans in dataset
+    // 1. Fast match against clusters in metadata
     const queryLower = query.toLowerCase();
     if (metadata) {
       const matchedCluster = metadata.clusters.find(
@@ -501,7 +491,11 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
         if (mapInstanceRef.current) {
           mapInstanceRef.current.flyTo(matchedKec.center, 14, { duration: 1 });
         }
-        await performCoverageCheck(matchedKec.center[0], matchedKec.center[1], `Kecamatan ${matchedKec.name}`);
+        await performCoverageCheck(
+          matchedKec.center[0],
+          matchedKec.center[1],
+          `Kecamatan ${matchedKec.name}`,
+        );
         return;
       }
     }
@@ -531,20 +525,20 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
       } else {
         setIsSearching(false);
         setErrorMessage(
-          `Alamat "${query}" tidak ditemukan di peta. Coba pilih Kecamatan atau masukkan nama kelurahan terdekat.`,
+          `Alamat "${query}" tidak ditemukan di peta. Coba pilih Kecamatan atau gunakan nama jalan terdekat.`,
         );
       }
     } catch (err) {
       console.error("Geocoding error:", err);
       setIsSearching(false);
-      setErrorMessage("Terjadi kesalahan saat mencari alamat. Periksa koneksi internet Anda.");
+      setErrorMessage("Gagal mencari alamat. Periksa koneksi internet Anda.");
     }
   }
 
   // Handle GPS location
   function handleGpsLocation() {
     if (!navigator.geolocation) {
-      setErrorMessage("Browser Anda tidak mendukung fitur lokasi GPS.");
+      setErrorMessage("Browser tidak mendukung GPS.");
       return;
     }
 
@@ -560,16 +554,14 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
       (err) => {
         setIsSearching(false);
         setErrorMessage(
-          err.code === 1
-            ? "Izin akses lokasi GPS ditolak oleh browser. Silakan ketik nama alamat secara manual."
-            : `Gagal membaca GPS: ${err.message}`,
+          err.code === 1 ? "Izin GPS ditolak. Silakan ketik nama lokasi secara manual." : err.message,
         );
       },
       { enableHighAccuracy: true, timeout: 10000 },
     );
   }
 
-  // Change Kecamatan from dropdown or chip
+  // Change Kecamatan from unified dropdown
   function handleSelectKecamatan(kecId: string) {
     setSelectedKecamatan(kecId);
     setErrorMessage(null);
@@ -587,14 +579,6 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
     }
   }
 
-  // Click on a specific Cluster pill
-  function handleClusterClick(cluster: ClusterInfo) {
-    setSearchQuery(cluster.name);
-    setIsSearching(true);
-    setErrorMessage(null);
-    performCoverageCheck(cluster.lat, cluster.lon, `${cluster.name} (${cluster.kec})`);
-  }
-
   // WhatsApp registration URL
   const getWhatsAppRegistrationUrl = () => {
     if (!result || !result.nearestFat) return "#";
@@ -610,310 +594,294 @@ export function CoverageMap({ className = "", showFullPortalLink = true }: Cover
   };
 
   return (
-    <div className={`flex flex-col gap-5 ${className}`}>
-      {/* Scope Info Banner */}
-      <div className="rounded-xl border border-brand/20 bg-gradient-to-r from-brand/10 via-purple-500/5 to-transparent p-3.5 sm:p-4 shadow-sm">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <div className="flex items-center gap-2.5">
-            <div className="rounded-lg bg-brand/15 p-2 text-brand">
-              <Radio className="size-5 animate-pulse" />
-            </div>
-            <div>
-              <h3 className="font-extrabold text-sm sm:text-base text-foreground flex items-center gap-1.5">
-                Jaringan Fiber MyRepublic Banyumas Raya
-                <span className="inline-flex items-center rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600 dark:text-emerald-400">
-                  Aktif RFS
-                </span>
-              </h3>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                Mencakup <strong>25 Kecamatan</strong>, <strong>818 Cluster</strong>, dan{" "}
-                <strong>9.586 Titik Tiang FAT</strong> di seluruh Kabupaten Banyumas.
-              </p>
-            </div>
-          </div>
+    <div className={`relative w-full ${className}`}>
+      {/* Sleek Hardware-Frame Container with Map */}
+      <div className="relative h-[620px] w-full overflow-hidden rounded-2xl border border-border/80 bg-slate-950 shadow-xl sm:h-[660px]">
+        {/* Leaflet Map Canvas */}
+        <div ref={mapContainerRef} className="size-full z-0" />
 
-          <div className="flex items-center gap-2 text-xs font-semibold text-muted-foreground self-start sm:self-auto">
-            <span className="rounded-md border border-border bg-card px-2.5 py-1">
-              {metadata?.totalKecamatans ?? 25} Kecamatan
-            </span>
-            <span className="rounded-md border border-border bg-card px-2.5 py-1">
-              {metadata?.totalClusters ?? 818} Cluster
-            </span>
-            <span className="rounded-md border border-brand/30 bg-brand/10 text-brand px-2.5 py-1">
-              9.586 FAT
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* Search Bar & Quick Controls */}
-      <div className="flex flex-col gap-3">
-        <form onSubmit={handleAddressSearch} className="flex flex-col gap-2 sm:flex-row">
-          <div className="relative flex-1">
-            <MapPin className="absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-brand" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Cari jalan, desa, cluster (cth: Wangon, Berkoh, Klapagading, HR Boenyamin...)"
-              className="h-12 w-full rounded-md border border-input bg-background pl-11 pr-4 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20 shadow-sm"
-              disabled={isSearching}
-            />
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Button
-              type="submit"
-              variant="brand"
-              size="lg"
-              className="h-12 flex-1 sm:flex-none font-bold gap-2 px-6"
-              disabled={isSearching}
-            >
-              {isSearching ? (
-                <Loader2 className="size-4 animate-spin" />
-              ) : (
-                <Search className="size-4" />
-              )}
-              <span>{isSearching ? "Mengecek..." : "Cek Area"}</span>
-            </Button>
-
-            <Button
-              type="button"
-              variant="outline"
-              size="lg"
-              onClick={handleGpsLocation}
-              disabled={isSearching}
-              title="Gunakan Titik Lokasi GPS Saya"
-              className="h-12 px-3.5 shrink-0 hover:border-brand hover:text-brand"
-            >
-              <LocateFixed className="size-4" />
-            </Button>
-          </div>
-        </form>
-
-        {/* Kecamatan Filter & Dropdown */}
-        <div className="flex flex-col gap-2 pt-1 text-xs">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="flex items-center gap-1 font-semibold text-muted-foreground">
-              <Building2 className="size-3.5 text-brand" /> Pilih Kecamatan:
-            </span>
-
-            {/* Complete 25 Kecamatan Dropdown */}
-            {metadata && metadata.kecamatans.length > 0 ? (
-              <div className="relative">
+        {/* FLOATING COMMAND ISLAND: Clean unified top HUD (Heads Up Display) */}
+        <div className="absolute top-4 inset-x-3 sm:inset-x-auto sm:left-1/2 sm:-translate-x-1/2 sm:w-[620px] z-20 pointer-events-auto">
+          <div className="rounded-2xl border border-border/70 bg-card/95 p-1.5 shadow-2xl backdrop-blur-md">
+            <form onSubmit={handleAddressSearch} className="flex items-center gap-1.5">
+              {/* Kecamatan Quick Select */}
+              <div className="relative shrink-0">
                 <select
                   value={selectedKecamatan}
                   onChange={(e) => handleSelectKecamatan(e.target.value)}
-                  className="rounded-md border border-border bg-card px-2.5 py-1 text-xs font-semibold text-foreground outline-none focus:border-brand focus:ring-1 focus:ring-brand cursor-pointer shadow-sm"
+                  className="h-10 pl-8 pr-7 text-xs font-semibold rounded-xl bg-muted/60 hover:bg-muted text-foreground border border-border/60 outline-none transition focus:ring-2 focus:ring-brand/30 cursor-pointer appearance-none truncate max-w-[145px] sm:max-w-[200px]"
                 >
-                  <option value="ALL">📍 Semua Banyumas (25 Kecamatan)</option>
-                  {metadata.kecamatans.map((kec) => (
-                    <option key={kec.id} value={kec.id}>
-                      Kec. {kec.name} ({kec.clusters} Cluster • {kec.fats} FAT)
-                    </option>
-                  ))}
+                  <option value="ALL">Semua Wilayah Banyumas</option>
+                  <optgroup label="Purwokerto Kota">
+                    <option value="PURWOKERTO SELATAN">Pwt Selatan (485 FAT)</option>
+                    <option value="PURWOKERTO TIMUR">Pwt Timur (270 FAT)</option>
+                    <option value="PURWOKERTO UTARA">Pwt Utara (320 FAT)</option>
+                    <option value="PURWOKERTO BARAT">Pwt Barat (365 FAT)</option>
+                  </optgroup>
+                  <optgroup label="Banyumas Barat">
+                    <option value="WANGON">Wangon (840 FAT)</option>
+                    <option value="RAWALO">Rawalo (803 FAT)</option>
+                    <option value="JATILAWANG">Jatilawang (693 FAT)</option>
+                    <option value="CILONGOK">Cilongok (621 FAT)</option>
+                    <option value="AJIBARANG">Ajibarang (454 FAT)</option>
+                    <option value="PURWOJATI">Purwojati (363 FAT)</option>
+                    <option value="PEKUNCEN">Pekuncen (134 FAT)</option>
+                    <option value="LUMBIR">Lumbir (70 FAT)</option>
+                  </optgroup>
+                  <optgroup label="Banyumas Utara & Lereng Slamet">
+                    <option value="BATURRADEN">Baturraden (296 FAT)</option>
+                    <option value="SUMBANG">Sumbang (321 FAT)</option>
+                    <option value="KEDUNGBANTENG">Kedungbanteng (292 FAT)</option>
+                    <option value="KARANGLEWAS">Karanglewas (268 FAT)</option>
+                  </optgroup>
+                  <optgroup label="Banyumas Timur & Selatan">
+                    <option value="BANYUMAS">Banyumas (687 FAT)</option>
+                    <option value="KALIBAGOR">Kalibagor (662 FAT)</option>
+                    <option value="PATIKRAJA">Patikraja (419 FAT)</option>
+                    <option value="KEMBARAN">Kembaran (396 FAT)</option>
+                    <option value="KEBASEN">Kebasen (392 FAT)</option>
+                    <option value="KEMRANJEN">Kemranjen (198 FAT)</option>
+                    <option value="SOKARAJA">Sokaraja (149 FAT)</option>
+                    <option value="SOMAGEDE">Somagede (78 FAT)</option>
+                  </optgroup>
                 </select>
+                <MapPin className="absolute left-2.5 top-1/2 -translate-y-1/2 size-3.5 text-brand pointer-events-none" />
+                <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 size-3 text-muted-foreground pointer-events-none" />
+              </div>
+
+              {/* Address Search Input */}
+              <div className="relative flex-1 min-w-0">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onFocus={() => setShowSuggestions(true)}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setShowSuggestions(true);
+                  }}
+                  placeholder="Ketik jalan, cluster, atau RW..."
+                  className="h-10 w-full rounded-xl bg-transparent px-3 text-xs text-foreground placeholder:text-muted-foreground/70 outline-none"
+                  disabled={isSearching}
+                />
+              </div>
+
+              {/* GPS Button */}
+              <button
+                type="button"
+                onClick={handleGpsLocation}
+                disabled={isSearching}
+                title="Gunakan Lokasi GPS Saya"
+                className="size-10 shrink-0 flex items-center justify-center rounded-xl text-muted-foreground hover:text-brand hover:bg-muted/70 transition-colors"
+              >
+                <Crosshair className="size-4" />
+              </button>
+
+              {/* Search Submit Button */}
+              <Button
+                type="submit"
+                variant="brand"
+                size="sm"
+                className="h-10 px-4 rounded-xl font-bold text-xs gap-1.5 shrink-0 shadow-sm"
+                disabled={isSearching}
+              >
+                {isSearching ? (
+                  <Loader2 className="size-3.5 animate-spin" />
+                ) : (
+                  <Search className="size-3.5" />
+                )}
+                <span className="hidden sm:inline">{isSearching ? "Cek..." : "Cek Area"}</span>
+              </Button>
+            </form>
+
+            {/* Live Autocomplete Suggestions Popover */}
+            {showSuggestions && searchSuggestions.length > 0 ? (
+              <div className="mt-1.5 border-t border-border/50 pt-1.5 px-1">
+                <p className="px-2 pb-1 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+                  Cluster yang Cocok:
+                </p>
+                <div className="space-y-0.5">
+                  {searchSuggestions.map((c) => (
+                    <button
+                      key={c.id}
+                      type="button"
+                      onClick={() => {
+                        setSearchQuery(c.name);
+                        setShowSuggestions(false);
+                        performCoverageCheck(c.lat, c.lon, `${c.name} (${c.kec})`);
+                      }}
+                      className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-left text-xs hover:bg-muted transition-colors group cursor-pointer"
+                    >
+                      <span className="flex items-center gap-2 truncate">
+                        <Compass className="size-3.5 text-brand shrink-0" />
+                        <span className="font-semibold text-foreground group-hover:text-brand truncate">
+                          {c.name}
+                        </span>
+                      </span>
+                      <span className="text-[10px] text-muted-foreground shrink-0 font-medium">
+                        Kec. {c.kec} • {c.fats} FAT
+                      </span>
+                    </button>
+                  ))}
+                </div>
               </div>
             ) : null}
           </div>
 
-          {/* Quick Kecamatan Chips */}
-          <div className="flex flex-wrap items-center gap-1.5">
-            <button
-              type="button"
-              onClick={() => handleSelectKecamatan("ALL")}
-              className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold transition-all cursor-pointer ${
-                selectedKecamatan === "ALL"
-                  ? "border-brand bg-brand text-white shadow-sm"
-                  : "border-border bg-card text-foreground hover:border-brand hover:bg-brand/5 hover:text-brand"
-              }`}
-            >
-              Semua Wilayah
-            </button>
-
-            {HIGHLIGHTED_KECAMATANS.map((kecId) => {
-              const info = metadata?.kecamatans.find((k) => k.id === kecId);
-              const displayName = info ? info.name : kecId;
-              const isSelected = selectedKecamatan === kecId;
-
-              return (
-                <button
-                  key={kecId}
-                  type="button"
-                  onClick={() => handleSelectKecamatan(kecId)}
-                  className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold transition-all cursor-pointer ${
-                    isSelected
-                      ? "border-brand bg-brand text-white shadow-sm"
-                      : "border-border bg-card text-foreground hover:border-brand hover:bg-brand/5 hover:text-brand"
-                  }`}
-                >
-                  {displayName}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Cluster Pills in Selected Kecamatan */}
-          {activeClusters.length > 0 ? (
-            <div className="flex flex-wrap items-center gap-1.5 pt-1">
-              <span className="text-[10px] text-muted-foreground font-medium flex items-center gap-1">
-                <Compass className="size-3" /> Cluster Pilihan:
+          {/* Error Message Pill */}
+          {errorMessage ? (
+            <div className="mt-2 flex items-center justify-between gap-2 rounded-xl border border-destructive/30 bg-destructive/95 px-3 py-2 text-xs text-white shadow-lg backdrop-blur-md">
+              <span className="flex items-center gap-1.5">
+                <Info className="size-3.5 shrink-0" />
+                <span>{errorMessage}</span>
               </span>
-              {activeClusters.map((cluster) => (
-                <button
-                  key={cluster.id}
-                  type="button"
-                  onClick={() => handleClusterClick(cluster)}
-                  disabled={isSearching}
-                  title={`Cek coverage di cluster ${cluster.name}`}
-                  className="rounded border border-border/80 bg-muted/40 px-2 py-0.5 text-[10px] font-medium text-foreground transition hover:border-brand hover:bg-brand/10 hover:text-brand cursor-pointer"
-                >
-                  {cluster.name}
-                </button>
-              ))}
+              <button
+                type="button"
+                onClick={() => setErrorMessage(null)}
+                className="rounded p-0.5 hover:bg-white/20"
+              >
+                <X className="size-3.5" />
+              </button>
             </div>
           ) : null}
         </div>
 
-        {/* Loading Indicator */}
-        {dataLoading ? (
-          <p className="flex items-center gap-1.5 text-xs text-brand font-medium animate-pulse">
-            <Loader2 className="size-3.5 animate-spin" /> Menghubungkan ke 9.586 titik tiang fiber
-            se-Banyumas...
-          </p>
-        ) : null}
-
-        {errorMessage ? (
-          <div className="flex items-start gap-2.5 rounded-md border border-destructive/30 bg-destructive/10 p-3 text-xs text-destructive">
-            <Info className="size-4 shrink-0 mt-0.5" />
-            <span>{errorMessage}</span>
-          </div>
-        ) : null}
-      </div>
-
-      {/* Real-time Result Card */}
-      {result ? (
-        <div
-          className={`rounded-lg border p-4 sm:p-5 transition-all shadow-sm ${
-            result.status === "covered"
-              ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-950 dark:text-emerald-200"
-              : result.status === "full"
-                ? "border-amber-500/50 bg-amber-500/10 text-amber-950 dark:text-amber-200"
-                : "border-rose-500/50 bg-rose-500/10 text-rose-950 dark:text-rose-200"
-          }`}
-        >
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-start gap-3">
-              {result.status === "covered" ? (
-                <CheckCircle2 className="size-6 shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5" />
-              ) : result.status === "full" ? (
-                <Info className="size-6 shrink-0 text-amber-600 dark:text-amber-400 mt-0.5" />
-              ) : (
-                <XCircle className="size-6 shrink-0 text-rose-600 dark:text-rose-400 mt-0.5" />
-              )}
-
-              <div>
-                <h4 className="font-extrabold text-sm sm:text-base">
-                  {result.status === "covered"
-                    ? "ALAMAT TERCOVER & SIAP PASANG!"
-                    : result.status === "full"
-                      ? "TERCOVER FIBER (PORT SEMENTARA PENUH)"
-                      : "BELUM TERCOVER FIBER LANGSUNG"}
-                </h4>
-                <p className="mt-1 text-xs opacity-90 leading-relaxed">
+        {/* FLOATING RESULT CARD: Docked bottom sheet (Apple Maps / Modern HUD style) */}
+        {result ? (
+          <div className="absolute bottom-4 inset-x-3 sm:inset-x-auto sm:left-6 sm:w-96 z-30 pointer-events-auto animate-in fade-in slide-in-from-bottom-4 duration-300">
+            <div className="rounded-2xl border border-border/80 bg-card/95 p-4 sm:p-5 shadow-2xl backdrop-blur-md">
+              <div className="flex items-start justify-between pb-2 border-b border-border/50">
+                <div className="flex items-center gap-2">
                   {result.status === "covered" ? (
-                    <>
-                      Jarak ke tiang fiber terdekat hanya{" "}
-                      <strong>{result.distanceMeters} meter</strong> (maksimal 150m). Port kabel
-                      siap dipasang oleh teknisi.
-                    </>
+                    <CheckCircle2 className="size-4 text-emerald-500 shrink-0" />
                   ) : result.status === "full" ? (
-                    <>
-                      Tiang fiber berjarak <strong>{result.distanceMeters} meter</strong>, namun
-                      kapasitas port sedang penuh. Anda bisa mendaftar antrian prioritas penambahan
-                      port.
-                    </>
+                    <Info className="size-4 text-amber-500 shrink-0" />
                   ) : (
-                    <>
-                      Jarak ke tiang fiber terdekat adalah{" "}
-                      <strong>{result.distanceMeters} meter</strong> (melebihi batas aman 150m).
-                      Lokasi ini telah dicatat dalam rencana perluasan.
-                    </>
+                    <XCircle className="size-4 text-rose-500 shrink-0" />
                   )}
-                </p>
+                  <h4 className="font-extrabold text-xs sm:text-sm text-foreground uppercase tracking-wider">
+                    {result.status === "covered"
+                      ? "TERCOVER & SIAP PASANG"
+                      : result.status === "full"
+                        ? "TERCOVER (PORT PENUH)"
+                        : "DI LUAR JANGKAUAN FIBER"}
+                  </h4>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setResult(null)}
+                  className="rounded-lg p-1 text-muted-foreground hover:bg-muted hover:text-foreground"
+                  title="Tutup Hasil"
+                >
+                  <X className="size-4" />
+                </button>
+              </div>
+
+              {/* Main Distance & Details */}
+              <div className="mt-3 flex items-center justify-between">
+                <div>
+                  <span className="text-[11px] text-muted-foreground font-medium">
+                    Jarak ke Tiang FAT:
+                  </span>
+                  <div className="flex items-baseline gap-1">
+                    <span
+                      className={`text-2xl font-black font-mono ${
+                        result.status === "covered"
+                          ? "text-emerald-600 dark:text-emerald-400"
+                          : result.status === "full"
+                            ? "text-amber-600 dark:text-amber-400"
+                            : "text-rose-600 dark:text-rose-400"
+                      }`}
+                    >
+                      {result.distanceMeters}
+                    </span>
+                    <span className="text-xs font-semibold text-muted-foreground">meter</span>
+                  </div>
+                </div>
 
                 {result.nearestFat ? (
-                  <div className="mt-2.5 flex flex-wrap gap-2 text-[11px] font-mono">
-                    <span className="rounded bg-background/80 px-2 py-0.5 font-bold border border-current/20">
-                      FAT ID: {result.nearestFat[0]}
-                    </span>
-                    <span className="rounded bg-background/80 px-2 py-0.5 font-bold border border-current/20">
-                      Cluster: {result.nearestFat[1]}
-                    </span>
-                    {result.nearestFat[7] ? (
-                      <span className="rounded bg-background/80 px-2 py-0.5 border border-current/20">
-                        Kecamatan: {result.nearestFat[7]}
-                      </span>
-                    ) : null}
+                  <div className="text-right">
+                    <span className="text-[10px] text-muted-foreground">Tiang Terdekat</span>
+                    <p className="font-mono text-xs font-bold text-foreground">
+                      {result.nearestFat[0]}
+                    </p>
+                    <p className="text-[10px] text-muted-foreground truncate max-w-[150px]">
+                      {result.nearestFat[1]}
+                    </p>
                   </div>
                 ) : null}
               </div>
+
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                {result.status === "covered" ? (
+                  <>
+                    Jarak sangat dekat (&le;150m). Tim teknisi MyRepublic siap langsung memasang kabel
+                    ke rumah Anda.
+                  </>
+                ) : result.status === "full" ? (
+                  <>
+                    Tiang berjarak aman ({result.distanceMeters}m), namun port sementara terisi penuh.
+                    Daftar antrian untuk prioritas penambahan port.
+                  </>
+                ) : (
+                  <>
+                    Jarak {result.distanceMeters}m melebihi batas aman tarikan kabel fiber (150m). Lokasi
+                    telah tercatat untuk rencana perluasan.
+                  </>
+                )}
+              </p>
+
+              {/* Action Button */}
+              <Button
+                variant={result.status === "covered" ? "signal" : "brand"}
+                size="sm"
+                className="mt-4 w-full font-bold gap-2 text-xs h-10 shadow-md"
+                asChild
+              >
+                <a href={getWhatsAppRegistrationUrl()} target="_blank" rel="noreferrer">
+                  <MessageCircle className="size-4" />
+                  <span>
+                    {result.status === "covered"
+                      ? "Daftar Pasang Baru via WhatsApp"
+                      : result.status === "full"
+                        ? "Reservasi Antrian via WhatsApp"
+                        : "Tanya Jadwal Survey via WA"}
+                  </span>
+                </a>
+              </Button>
             </div>
-
-            <Button
-              variant={result.status === "covered" ? "signal" : "brand"}
-              size="sm"
-              className="mt-2 sm:mt-0 font-extrabold shrink-0 gap-2 shadow-sm"
-              asChild
-            >
-              <a href={getWhatsAppRegistrationUrl()} target="_blank" rel="noreferrer">
-                <MessageCircle className="size-4" />
-                <span>
-                  {result.status === "covered"
-                    ? "Pasang Sekarang via WA"
-                    : result.status === "full"
-                      ? "Antrian Port via WA"
-                      : "Tanya Sales via WA"}
-                </span>
-              </a>
-            </Button>
-          </div>
-        </div>
-      ) : null}
-
-      {/* Map Canvas Container */}
-      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border bg-slate-100 shadow-sm sm:aspect-[16/9]">
-        <div ref={mapContainerRef} className="size-full z-10" />
-
-        {/* Map Legend Overlay */}
-        <div className="absolute bottom-3 left-3 z-20 flex flex-wrap items-center gap-3 rounded-md border border-border bg-background/90 p-2 text-[10px] font-bold backdrop-blur shadow-sm pointer-events-auto">
-          <span className="flex items-center gap-1.5 text-muted-foreground">
-            <span className="size-2.5 rounded-full bg-purple-600"></span> Tiang FAT Tersedia
-          </span>
-          <span className="flex items-center gap-1.5 text-muted-foreground">
-            <span className="size-2.5 rounded-full bg-slate-800"></span> Port Penuh
-          </span>
-          <span className="flex items-center gap-1.5 text-muted-foreground">
-            <span className="size-2.5 rounded-full bg-purple-400"></span> Cluster Area (Zoom Out)
-          </span>
-        </div>
-
-        {/* Full GIS Portal Button Link */}
-        {showFullPortalLink ? (
-          <div className="absolute top-3 right-3 z-20 pointer-events-auto">
-            <Button
-              variant="outline"
-              size="sm"
-              className="bg-background/95 backdrop-blur text-xs font-bold gap-1.5 shadow-md hover:border-brand hover:text-brand"
-              asChild
-            >
-              <a href="/coverage">
-                <span>Peta GIS Lengkap</span>
-                <ExternalLink className="size-3.5" />
-              </a>
-            </Button>
           </div>
         ) : null}
+
+        {/* FLOATING BOTTOM BAR: Discreet Legend & Full Portal Link */}
+        <div className="absolute bottom-3 left-3 right-3 sm:right-auto z-20 flex flex-wrap items-center gap-2 pointer-events-auto">
+          {/* Subtle Clean Legend */}
+          <div className="flex items-center gap-3 rounded-xl border border-border/60 bg-card/90 px-3 py-1.5 text-[11px] font-medium backdrop-blur-md shadow-sm">
+            <span className="flex items-center gap-1.5 text-muted-foreground">
+              <span className="size-2 rounded-full bg-purple-600 shadow-[0_0_6px_rgba(147,51,234,0.6)]"></span> Tiang FAT Tersedia
+            </span>
+            <span className="flex items-center gap-1.5 text-muted-foreground">
+              <span className="size-2 rounded-full bg-slate-600"></span> Port Penuh
+            </span>
+          </div>
+
+          {/* Direct Link to GIS Portal */}
+          {showFullPortalLink ? (
+            <a
+              href="/coverage"
+              className="flex items-center gap-1.5 rounded-xl border border-border/60 bg-card/90 px-3 py-1.5 text-[11px] font-bold text-foreground hover:text-brand hover:border-brand/40 backdrop-blur-md shadow-sm transition-colors"
+            >
+              <span>Database GIS Lengkap</span>
+              <ExternalLink className="size-3 text-muted-foreground" />
+            </a>
+          ) : null}
+        </div>
+
+        {/* Top-Left Live Status Tag */}
+        <div className="absolute top-4 left-4 z-10 hidden sm:flex items-center gap-2 rounded-xl border border-border/50 bg-card/85 px-2.5 py-1 text-[11px] font-semibold text-muted-foreground backdrop-blur-md shadow-sm pointer-events-none">
+          <Radio className="size-3.5 text-emerald-500 animate-pulse" />
+          <span>9.586 Tiang FAT • 25 Kecamatan</span>
+        </div>
       </div>
     </div>
   );
