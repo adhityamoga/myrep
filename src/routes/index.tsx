@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 import { FormEvent, useState, useEffect, useRef } from "react";
 
+import brandLogo from "@/assets/logo.png";
 import customerImage from "@/assets/myrepublic-customer.png";
 import gaugeGray from "@/assets/speedometer-gray.png";
 import gaugePurple from "@/assets/speedometer-purple.png";
@@ -132,10 +133,7 @@ const benefits = [
 function Brand() {
   return (
     <a href="#home" className="flex shrink-0 items-center gap-2" aria-label="MyRepublic Purwokerto">
-      <span className="grid size-7 place-items-center rounded-sm bg-signal text-sm font-black text-signal-foreground">
-        my
-      </span>
-      <span className="text-base font-extrabold text-brand-foreground sm:text-lg">MyRepublic</span>
+      <img src={brandLogo} alt="MyRepublic" className="h-7 w-auto object-contain sm:h-8" />
     </a>
   );
 }
@@ -417,7 +415,14 @@ function SpeedTest() {
     // 270deg = Top (50)
     // 315deg = Top-Right (100)
     // 360deg = Right (120)
-    const keyframes = [
+    interface Keyframe {
+      t: number;
+      val: number;
+      angle: number;
+      maskAngle: number;
+    }
+
+    const keyframes: Keyframe[] = [
       { t: 0, val: 0, angle: 135, maskAngle: 0 },
       { t: 0.3, val: 50, angle: 270, maskAngle: 135 },
       { t: 0.5, val: 120, angle: 360, maskAngle: 225 }, // Overshoot
