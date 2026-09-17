@@ -97,7 +97,7 @@ const colorMap: Record<string, string> = {
   gray: "#8b5cf6",
 };
 
-export function CoveragePage() {
+function CoveragePage() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<LeafletMap | null>(null);
   const markersLayerRef = useRef<LayerGroup | null>(null);
