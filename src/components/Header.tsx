@@ -9,6 +9,7 @@ export function Header() {
     ["Paket Internet", "/#paket"],
     ["Speed Test", "/#speedtest"],
     ["Cek Jangkauan", "/#jangkauan"],
+    ["Peta GIS", "/coverage"],
     ["Karir", "/karir"],
     ["FAQ", "/#faq"],
   ];

@@ -1,0 +1,4116 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2371, -7.441699999999991] },
+      "properties": { "fdt_id": "VIP OLT PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.249, -7.403600000000021] },
+      "properties": { "fdt_id": "GRENDENG RW 07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2503, -7.399699999999996] },
+      "properties": { "fdt_id": "GRENDENG RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2543, -7.401199999999985] },
+      "properties": { "fdt_id": "GRENDENG RW 01 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2516, -7.399200000000013] },
+      "properties": { "fdt_id": "GRENDENG RW 04 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2234, -7.488599999999998] },
+      "properties": { "fdt_id": "PATIKRAJA RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2236, -7.485499999999998] },
+      "properties": { "fdt_id": "PATIKRAJA RW 04", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2618, -7.413900000000009] },
+      "properties": { "fdt_id": "ARCAWINANGUN RW 09", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2177, -7.431800000000006] },
+      "properties": { "fdt_id": "PASIRMUNCANG RW 04 PURWOKERTO BARAT", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2482, -7.4065] },
+      "properties": { "fdt_id": "GRENDENG RW 08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07116, -7.430129999999999] },
+      "properties": { "fdt_id": "KARANGBAWANG RW 02 AJIBARANG - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.276839, -7.505302999999996] },
+      "properties": { "fdt_id": "WLAHAR WETAN RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2562, -7.405200000000011] },
+      "properties": { "fdt_id": "KARANGWANGKAL RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.24, -7.4064] },
+      "properties": { "fdt_id": "PERUMAHAN SUMAMPIR INDAH RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.214038, -7.517156000000003] },
+      "properties": { "fdt_id": "TUMIYANG RW 03 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.266391, -7.58465799999999] },
+      "properties": { "fdt_id": "ADISANA RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2532, -7.398999999999991] },
+      "properties": { "fdt_id": "GRENDENG RW 03 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2288, -7.442000000000013] },
+      "properties": { "fdt_id": "TANJUNG RW 01 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.099939, -7.392449999999988] },
+      "properties": { "fdt_id": "CIKEMBULAN RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2543, -7.405799999999996] },
+      "properties": { "fdt_id": "KARANGWANGKAL RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.252564, -7.496294000000012] },
+      "properties": { "fdt_id": "SOKAWERA KIDUL RW 03 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2652, -7.422200000000004] },
+      "properties": { "fdt_id": "MERSI RW 01 PURWOKERTO TIMUR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.239686, -7.373151000000004] },
+      "properties": { "fdt_id": "REMPOAH RW 06 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2527, -7.401399999999986] },
+      "properties": { "fdt_id": "GRENDENG RW 02 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06874, -7.396760000000004] },
+      "properties": { "fdt_id": "CIBERUNG RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2478, -7.450199999999986] },
+      "properties": { "fdt_id": "TELUK RW 02 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2202, -7.491699999999999] },
+      "properties": { "fdt_id": "PATIKRAJA RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2405, -7.408999999999997] },
+      "properties": { "fdt_id": "BANCARKEMBAR RW 07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2263, -7.488499999999978] },
+      "properties": { "fdt_id": "PATIKRAJA RW 07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2753, -7.413700000000008] },
+      "properties": { "fdt_id": "GRIYA TEGAL SARI INDAH RW 10 LEDUG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2298, -7.420399999999992] },
+      "properties": { "fdt_id": "BRANCH OFFICE PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.106329, -7.393278000000012] },
+      "properties": { "fdt_id": "CIKEMBULAN RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.079295, -7.407346999999977] },
+      "properties": { "fdt_id": "AJIBARANG KULON RW 07 AJIBARANG - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2428, -7.444199999999988] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 10", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2727, -7.411699999999994] },
+      "properties": { "fdt_id": "GRIYA TEGAL SARI INDAH RW 09 DUKUHWALUH", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2261, -7.431400000000004] },
+      "properties": { "fdt_id": "PASIRMUNCANG RW 01 PURWOKERTO BARAT", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.155658, -7.503705999999994] },
+      "properties": { "fdt_id": "TIPAR RW 11 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2359, -7.394900000000004] },
+      "properties": { "fdt_id": "Perumahan Sumampir Indah RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.270199, -7.503755000000012] },
+      "properties": { "fdt_id": "WLAHAR WETAN RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2621, -7.411400000000013] },
+      "properties": { "fdt_id": "ARCAWINANGUN RW 07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2506, -7.401199999999985] },
+      "properties": { "fdt_id": "GRENDENG RW 06 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.219, -7.44769999999999] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW 02 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.227792, -7.364918999999981] },
+      "properties": { "fdt_id": "KEBUMEN RW 01 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.097319, -7.570492999999995] },
+      "properties": { "fdt_id": "GUNUNG WETAN RW 03 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2964, -7.395600000000009] },
+      "properties": { "fdt_id": "LINGGASARI RW 01 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.305498, -7.511996000000001] },
+      "properties": { "fdt_id": "KALIORI RW 07 KALIBAGOR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.306885, -7.517380999999994] },
+      "properties": { "fdt_id": "SOKAWERA RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.069103, -7.453528000000007] },
+      "properties": { "fdt_id": "WINDUNEGARA RW 04 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.227, -7.486899999999988] },
+      "properties": { "fdt_id": "PATIKRAJA RW 06", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2289, -7.487400000000011] },
+      "properties": { "fdt_id": "PATIKRAJA RW 10", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.069119, -7.431157000000022] },
+      "properties": { "fdt_id": "KARANGBAWANG RW 01 AJIBARANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.225145, -7.341304000000004] },
+      "properties": { "fdt_id": "KARANG TENGAH RW 03 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.301551, -7.508699000000007] },
+      "properties": { "fdt_id": "KALIORI RW 06 KALIBAGOR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.168772, -7.414104000000002] },
+      "properties": { "fdt_id": "PAGERAJI RW 03 CILONGOK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.12837, -7.539330000000016] },
+      "properties": { "fdt_id": "ADISARA RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2307, -7.409900000000002] },
+      "properties": { "fdt_id": "PURWANEGARA RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.277299, -7.513771999999985] },
+      "properties": { "fdt_id": "KALISUBE RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2408, -7.437900000000006] },
+      "properties": { "fdt_id": "PONDOK INDAH GANDASULI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.148238, -7.494291000000011] },
+      "properties": { "fdt_id": "TIPAR RW 01 PURWOKERTO - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.283622, -7.574696999999995] },
+      "properties": { "fdt_id": "PAGERALANG RW 10 SAMPAI RW 12 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2769, -7.413900000000009] },
+      "properties": { "fdt_id": "GRIYA TEGAL SARI INDAH RW 06 BOJONGSARI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1784, -7.525299999999979] },
+      "properties": { "fdt_id": "TAMBAKNEGARA RW 05 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2246, -7.486999999999988] },
+      "properties": { "fdt_id": "PATIKRAJA RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2245, -7.450600000000009] },
+      "properties": {
+        "fdt_id": "OPEN AREA JL RAYA SIDABOWA PATIKRAJA BANYUMAS - FDT 3",
+        "type": "FDT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3051, -7.522500000000001] },
+      "properties": { "fdt_id": "KEDUNGUTER RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.071581, -7.525200000000019] },
+      "properties": { "fdt_id": "KLAPAGADING RW 09 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.161609, -7.41237899999998] },
+      "properties": { "fdt_id": "PAGERAJI RW 02 CILONGOK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2502, -7.424100000000015] },
+      "properties": { "fdt_id": "PURWOKERTO WETAN RW 10", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.316238, -7.488619999999995] },
+      "properties": { "fdt_id": "SURO RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2698, -7.431400000000004] },
+      "properties": { "fdt_id": "MERSI RW 05 PURWOKERTO TIMUR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1987, -7.409699999999981] },
+      "properties": { "fdt_id": "PASIR KIDUL RW 05 PURWOKERTO BAR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2295, -7.394900000000004] },
+      "properties": { "fdt_id": "PURWOSARI RW 02 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2233, -7.436000000000014] },
+      "properties": { "fdt_id": "TANJUNG RW 05 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2169, -7.44149999999999] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW.08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2209, -7.441399999999989] },
+      "properties": { "fdt_id": "OPEN AREA PENGASINAN KEDUNGWARINGIN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.081818, -7.407959999999997] },
+      "properties": { "fdt_id": "AJIBARANG KULON RW 07 AJIBARANG - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.268484, -7.508791000000006] },
+      "properties": { "fdt_id": "KALIORI RW 01 KALIBAGOR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.24, -7.420099999999989] },
+      "properties": { "fdt_id": "KEBON DALEM RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.253217, -7.495451000000006] },
+      "properties": { "fdt_id": "SOKAWERA KIDUL RW 04 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.270714, -7.526735000000007] },
+      "properties": { "fdt_id": "PASINGGANGAN RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2695, -7.391300000000001] },
+      "properties": { "fdt_id": "PERUMAHAN MUTIARA HIJAU PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2048, -7.451500000000015] },
+      "properties": { "fdt_id": "KEDIRI RW 01 KARANGLEWAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2216, -7.489900000000008] },
+      "properties": { "fdt_id": "PATIKRAJA RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.328117, -7.500798999999995] },
+      "properties": { "fdt_id": "SURO RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2272, -7.436000000000014] },
+      "properties": { "fdt_id": "TANJUNG RW 03 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2286, -7.488900000000001] },
+      "properties": { "fdt_id": "PATIKRAJA RW 09", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2457, -7.397500000000001] },
+      "properties": { "fdt_id": "PABUARAN RW 04 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1985, -7.394700000000003] },
+      "properties": { "fdt_id": "KEDUNGBANTENG RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2085, -7.417000000000009] },
+      "properties": { "fdt_id": "REJASARI RW 08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2491, -7.422000000000002] },
+      "properties": { "fdt_id": "PURWOKERTO LOR RW 02 (FDT 2)", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1687, -7.521199999999992] },
+      "properties": { "fdt_id": "PESAWAHAN RW 03 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.249128, -7.504005999999997] },
+      "properties": { "fdt_id": "PAPRINGAN RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.22779, -7.364905999999984] },
+      "properties": { "fdt_id": "KEBUMEN RW 02 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2607, -7.411699999999994] },
+      "properties": { "fdt_id": "ARCAWINANGUN RW 08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2761, -7.432600000000011] },
+      "properties": { "fdt_id": "LEDUG RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2812, -7.470800000000002] },
+      "properties": { "fdt_id": "PEKAJA RW 01 KALIBAGOR BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2251, -7.416300000000005] },
+      "properties": { "fdt_id": "KOBER RW.07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2194, -7.463699999999996] },
+      "properties": {
+        "fdt_id": "OPEN AREA JL RAYA SIDABOWA PATIKRAJA BANYUMAS - FDT 2",
+        "type": "FDT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.10674, -7.574137000000003] },
+      "properties": { "fdt_id": "GUNUNG WETAN RW 04 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06712, -7.397709999999991] },
+      "properties": { "fdt_id": "CIBERUNG RW 05 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.280459, -7.506049999999993] },
+      "properties": { "fdt_id": "KALIORI RW 02 KALIBAGOR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.284728, -7.514680999999996] },
+      "properties": { "fdt_id": "KALISUBE RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.161914, -7.420115000000012] },
+      "properties": { "fdt_id": "PAGERAJI RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.289334, -7.468183000000018] },
+      "properties": { "fdt_id": "KARANGDADAP RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.190521, -7.360209000000002] },
+      "properties": { "fdt_id": "KALISALAK RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.066223, -7.516041999999996] },
+      "properties": { "fdt_id": "KLAPAGADING RW 08 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.070075, -7.373622000000006] },
+      "properties": { "fdt_id": "BANJARAYAR RW 07 PEKUNCEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2346, -7.422400000000005] },
+      "properties": { "fdt_id": "BRUBAHAN RW 06", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.35933, -7.607110000000004] },
+      "properties": { "fdt_id": "KEBOKURA RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.316736, -7.505651999999996] },
+      "properties": { "fdt_id": "SROWOT RW 04 BANYUMAS - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.117972, -7.574840999999999] },
+      "properties": { "fdt_id": "PEKUNCEN RW 05 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1666, -7.522699999999983] },
+      "properties": { "fdt_id": "PESAWAHAN RW 05 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.277267, -7.524935999999998] },
+      "properties": { "fdt_id": "PASINGGANGAN RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.215, -7.424599999999999] },
+      "properties": { "fdt_id": "REJASARI RW 09", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06194, -7.412360000000007] },
+      "properties": {
+        "fdt_id": "OPEN AREA JALAN PARAKAN KELURAHAN KRACAK PURWOKERTO",
+        "type": "FDT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.03568, -7.426579999999996] },
+      "properties": { "fdt_id": "DARMAKRADENAN RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.298047, -7.502678999999992] },
+      "properties": { "fdt_id": "KALIORI RW 04 KALIBAGOR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.317183, -7.432494999999997] },
+      "properties": { "fdt_id": "BANJAR ANYAR RW 06 PURWOKERTO - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.280812, -7.511529999999993] },
+      "properties": { "fdt_id": "KALISUBE RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.242156, -7.558202999999983] },
+      "properties": { "fdt_id": "KALIWEDI RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.354968, -7.610936000000001] },
+      "properties": { "fdt_id": "KEBOKURA RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2791, -7.413500000000006] },
+      "properties": { "fdt_id": "GRIYA TEGAL SARI INDAH RW 07 BOJONGSARI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1753, -7.531700000000001] },
+      "properties": { "fdt_id": "RAWALO RW 08 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.035488, -7.349543000000008] },
+      "properties": { "fdt_id": "WANGON RW 16 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.210441, -7.436346000000005] },
+      "properties": { "fdt_id": "PANGEBATAN RW 06", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2048, -7.437900000000006] },
+      "properties": { "fdt_id": "PANGABETAN RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2081, -7.449800000000004] },
+      "properties": { "fdt_id": "KEDIRI RW 03 KARANGLEWAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.14151, -7.546619999999995] },
+      "properties": { "fdt_id": "KARANGANYAR RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2874, -7.414999999999996] },
+      "properties": { "fdt_id": "Open Area Jl KH Hasyim Asy'ari Kembaran Banyumas", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2459, -7.418399999999998] },
+      "properties": { "fdt_id": "OPEN AREA MANGUNJAYA DSK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.193328, -7.360422] },
+      "properties": { "fdt_id": "KALISALAK RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.351271, -7.609080000000013] },
+      "properties": { "fdt_id": "KEBOKURA RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.156939, -7.427142000000013] },
+      "properties": { "fdt_id": "PAGERAJI RW 07 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1674, -7.524899999999997] },
+      "properties": { "fdt_id": "PESAWAHAN RW 02 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2165, -7.454599999999996] },
+      "properties": {
+        "fdt_id": "OPEN AREA JL RAYA SIDABOWA PATIKRAJA BANYUMAS - FDT 1",
+        "type": "FDT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.319772, -7.43635499999999] },
+      "properties": { "fdt_id": "BANJAR ANYAR RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.296504, -7.406775000000012] },
+      "properties": { "fdt_id": "PURBADANA RW 03 KEMBARAN - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.17366, -7.50949099999999] },
+      "properties": { "fdt_id": "SIDAMULIH RW 07 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2214, -7.396800000000017] },
+      "properties": { "fdt_id": "BOBOSAN RW 03 - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.132376, -7.417239] },
+      "properties": { "fdt_id": "CIPETE RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2812, -7.447100000000006] },
+      "properties": { "fdt_id": "FIRDAUS ESTATE SOKARAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.318646, -7.511683000000002] },
+      "properties": { "fdt_id": "SROWOT RW 04 BANYUMAS - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06831, -7.429384000000006] },
+      "properties": { "fdt_id": "KARANGBAWANG RW 03 AJIBARANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.359972, -7.611895000000013] },
+      "properties": { "fdt_id": "KEBOKURA RW 03 PURWOKERTO - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.166158, -7.535706000000005] },
+      "properties": { "fdt_id": "BANJARPARAKAN RW 09 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07514, -7.403490000000012] },
+      "properties": { "fdt_id": "AJIBARANG WETAN RW 08 AJIBARANG - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.18493, -7.54892000000001] },
+      "properties": { "fdt_id": "CINDAGA RW 10 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.062174, -7.490220999999988] },
+      "properties": { "fdt_id": "JAMBU RW 02 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.177526, -7.507822000000006] },
+      "properties": { "fdt_id": "SIDAMULIH RW 08 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2173, -7.41720000000001] },
+      "properties": { "fdt_id": "REJASARI RW 07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.08111, -7.404699999999989] },
+      "properties": { "fdt_id": "AJIBARANG WETAN RW 08 AJIBARANG - FDT 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.08856, -7.545780000000017] },
+      "properties": { "fdt_id": "BANTAR RW 03 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.20232, -7.443152000000007] },
+      "properties": { "fdt_id": "KEDIRI RW 05 KARANGLEWAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.102665, -7.390088999999982] },
+      "properties": { "fdt_id": "CIKEMBULAN RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2116, -7.42320000000001] },
+      "properties": { "fdt_id": "REJASARI RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.293599, -7.401948000000004] },
+      "properties": { "fdt_id": "PURBADANA RW 03 KEMBARAN - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2447, -7.409699999999981] },
+      "properties": { "fdt_id": "BANCARKEMBAR RW 04", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.297943, -7.537630000000004] },
+      "properties": { "fdt_id": "KEJAWAR RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.135967, -7.554256000000006] },
+      "properties": { "fdt_id": "KARANGLEWAS RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.12195, -7.499609999999999] },
+      "properties": { "fdt_id": "PURWOJATI RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2897, -7.392899999999991] },
+      "properties": { "fdt_id": "LINGGASARI RW 03 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.25889, -7.370090000000014] },
+      "properties": { "fdt_id": "BANTERAN RW 06 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.164838, -7.507710000000012] },
+      "properties": { "fdt_id": "SIDAMULIH RW 04 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.03088, -7.534850000000002] },
+      "properties": { "fdt_id": "RANDEGAN RW 05 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.31899, -7.466367999999983] },
+      "properties": { "fdt_id": "PETIR RW 04 KALIBAGOR BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.267, -7.426299999999991] },
+      "properties": { "fdt_id": "MERSI RW 03 PURWOKERTO TIMUR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.281677, -7.536044999999996] },
+      "properties": { "fdt_id": "KEDUNGGEDE RW 03 DAN 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2318, -7.490999999999994] },
+      "properties": { "fdt_id": "PEGALONGAN RW 02 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2809, -7.457500000000015] },
+      "properties": { "fdt_id": "GRAHA PERMATA RESIDENCE DUSUN I KALIKIDANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.22, -7.430699999999999] },
+      "properties": { "fdt_id": "PASIRMUNCANG RW 03 PURWOKERTO BARAT", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.055769, -7.502586000000012] },
+      "properties": { "fdt_id": "JAMBU RW 04 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07042, -7.430769999999995] },
+      "properties": { "fdt_id": "KARANGBAWANG RW 02 AJIBARANG - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2621, -7.451299999999994] },
+      "properties": { "fdt_id": "KARANGRAU RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2982, -7.401500000000008] },
+      "properties": { "fdt_id": "LINGGASARI RW 02 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.239121, -7.36873499999999] },
+      "properties": { "fdt_id": "REMPOAH RW 05 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.301126, -7.505152000000013] },
+      "properties": { "fdt_id": "KALIORI RW 05 KALIBAGOR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.296038, -7.517374999999977] },
+      "properties": { "fdt_id": "SUDAGARAN RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.295676, -7.474502999999995] },
+      "properties": { "fdt_id": "KALIBAGOR RW 06 BANYUMAS - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.33211, -7.489569999999981] },
+      "properties": { "fdt_id": "SURO RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.063342, -7.49018599999999] },
+      "properties": { "fdt_id": "JAMBU RW 05 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2554, -7.451299999999994] },
+      "properties": { "fdt_id": "PERUMNAS TELUK RW.06", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.14496, -7.54768000000001] },
+      "properties": { "fdt_id": "KARANGANYAR RW 03 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2434, -7.41110000000001] },
+      "properties": { "fdt_id": "BANCARKEMBAR RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2236, -7.4309] },
+      "properties": { "fdt_id": "PASIRMUNCANG RW 02 PURWOKERTO BARAT", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.223259, -7.345618000000012] },
+      "properties": { "fdt_id": "KARANG TENGAH RW 01 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.123662, -7.525668999999995] },
+      "properties": { "fdt_id": "GENTAWANGI RW 03 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.15976, -7.431544999999991] },
+      "properties": { "fdt_id": "PAGERAJI RW 06 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.065895, -7.512154000000004] },
+      "properties": { "fdt_id": "KLAPAGADING RW 12 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.081829, -7.380872000000014] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 06 PEKUNCEN PURWOKERTO - FDT 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3115, -7.463743999999998] },
+      "properties": { "fdt_id": "PETIR RW 01 KALIBAGOR BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2514, -7.449600000000003] },
+      "properties": { "fdt_id": "TELUK RW 03 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.234015, -7.365023999999996] },
+      "properties": { "fdt_id": "REMPOAH RW 01 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2482, -7.393300000000014] },
+      "properties": { "fdt_id": "PABUARAN RW 06 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.228703, -7.364375999999996] },
+      "properties": { "fdt_id": "KEBUMEN RW 04 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2865, -7.404300000000006] },
+      "properties": { "fdt_id": "KARANGSARI RW 01 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.363662, -7.61100999999999] },
+      "properties": { "fdt_id": "SUMPIUH RW 02 PURWOKERTO - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.263846, -7.389761000000002] },
+      "properties": { "fdt_id": "TAMBAKSOGRA RW 01 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.139989, -7.401975999999983] },
+      "properties": { "fdt_id": "CILONGOK RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.293985, -7.531387000000002] },
+      "properties": { "fdt_id": "KEJAWAR RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.158786, -7.400283999999995] },
+      "properties": { "fdt_id": "PAGERAJI RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2359, -7.388600000000003] },
+      "properties": { "fdt_id": "KUTASARI RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.278038, -7.536611999999987] },
+      "properties": { "fdt_id": "KEDUNGGEDE RW 05 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.282621, -7.575347999999982] },
+      "properties": { "fdt_id": "PAGERALANG RW 13 SAMPAI RW 15 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.284316, -7.511562000000003] },
+      "properties": { "fdt_id": "KALISUBE RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2968, -7.469500000000013] },
+      "properties": { "fdt_id": "KALIBAGOR RW 06 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.11992, -7.489579999999989] },
+      "properties": { "fdt_id": "PURWOJATI RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07877, -7.511089999999998] },
+      "properties": { "fdt_id": "GERDUREN RW 02 PURWOJATI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.064486, -7.510629000000004] },
+      "properties": { "fdt_id": "OPEN AREA JL. PENATUSAN WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0809, -7.410729999999992] },
+      "properties": { "fdt_id": "AJIBARANG WETAN RW 02 AJIBARANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1817, -7.536300000000011] },
+      "properties": { "fdt_id": "RAWALO RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.319792, -7.436040999999989] },
+      "properties": { "fdt_id": "BANJAR ANYAR RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2454, -7.392999999999992] },
+      "properties": { "fdt_id": "PABUARAN RW 03 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.111216, -7.388813000000001] },
+      "properties": { "fdt_id": "KALISARI RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2426, -7.456799999999991] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.21578, -7.493179999999993] },
+      "properties": { "fdt_id": "NOTOG RW 03 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1942, -7.525900000000004] },
+      "properties": { "fdt_id": "TAMBAKNEGARA RW 03 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.251123, -7.344062000000005] },
+      "properties": { "fdt_id": "KOTAYASA RT 01 SAMPAI RT 04 SUMBANG - FDT 3", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.26867, -7.361709999999995] },
+      "properties": { "fdt_id": "BANTERAN RW 05 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.25, -7.471900000000009] },
+      "properties": { "fdt_id": "TELUK RW 13 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2713, -7.425299999999984] },
+      "properties": { "fdt_id": "LEDUG RW 04", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.227, -7.489700000000006] },
+      "properties": { "fdt_id": "PATIKRAJA RW 08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2392, -7.462200000000005] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 08 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.231173, -7.374942999999994] },
+      "properties": { "fdt_id": "PAMIJEN RW 02 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.05783, -7.398069999999981] },
+      "properties": { "fdt_id": "KRACAK RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.160922, -7.543499999999998] },
+      "properties": { "fdt_id": "BANJARPARAKAN RW 10 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.311443, -7.463646000000004] },
+      "properties": { "fdt_id": "PETIR RW 02 KALIBAGOR BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.096986, -7.556395000000009] },
+      "properties": { "fdt_id": "GUNUNG WETAN RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2337, -7.387200000000014] },
+      "properties": { "fdt_id": "KUTASARI RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07657, -7.554810000000001] },
+      "properties": { "fdt_id": "PENGADEGAN RW 08 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.179, -7.537599999999999] },
+      "properties": { "fdt_id": "RAWALO RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2295, -7.445400000000015] },
+      "properties": { "fdt_id": "KARANGPUCUNG RW 08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2409, -7.452300000000001] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 09", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07519, -7.406630000000005] },
+      "properties": { "fdt_id": "AJIBARANG WETAN RW 08 AJIBARANG - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.266298, -7.470748000000016] },
+      "properties": { "fdt_id": "KALIKIDANG RW 06 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2244, -7.445500000000016] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW 06 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.214, -7.402499999999995] },
+      "properties": { "fdt_id": "KARANGSALAM KIDUL RW 02 KEDUNGBANTENG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2349, -7.4247] },
+      "properties": { "fdt_id": "BRUBAHAN RW 07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.05735, -7.514501999999994] },
+      "properties": { "fdt_id": "OPEN AREA JL. PASAR LAMA WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.068083, -7.518824999999987] },
+      "properties": { "fdt_id": "KLAPAGADING RW 04 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.209228, -7.518435000000013] },
+      "properties": { "fdt_id": "GAMBARSARI RW 02 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.134032, -7.401724999999999] },
+      "properties": { "fdt_id": "PERNASIDI RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2036, -7.434500000000024] },
+      "properties": { "fdt_id": "PANGEBATAN RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.225142, -7.341191000000007] },
+      "properties": { "fdt_id": "KARANG TENGAH RW 04 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.250112, -7.579938999999987] },
+      "properties": { "fdt_id": "DUSUN KADUS KEBASEN - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2471, -7.426199999999989] },
+      "properties": { "fdt_id": "PURWOKERTO LOR RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.293813, -7.518536000000015] },
+      "properties": { "fdt_id": "SUDAGARAN RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.107666, -7.40844899999999] },
+      "properties": { "fdt_id": "BANJARSARI RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2302, -7.4948] },
+      "properties": { "fdt_id": "MANDIRANCAN RW 03 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.214697, -7.532078000000022] },
+      "properties": { "fdt_id": "KEBASEN RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.300656, -7.537092999999997] },
+      "properties": { "fdt_id": "KEJAWAR RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2095, -7.451400000000015] },
+      "properties": { "fdt_id": "KEDIRI RW 04 KARANGLEWAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.068955, -7.512481000000002] },
+      "properties": { "fdt_id": "KLAPAGADING RW 07 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2436, -7.451799999999997] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.18636, -7.363630000000003] },
+      "properties": { "fdt_id": "BASEH RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2506, -7.419199999999984] },
+      "properties": { "fdt_id": "PURWOKERTO LOR RW 02 (FDT 1)", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2834, -7.418299999999998] },
+      "properties": { "fdt_id": "BOJONGSARI RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.096276, -7.560504000000002] },
+      "properties": { "fdt_id": "GUNUNG WETAN RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.15602, -7.538999999999989] },
+      "properties": { "fdt_id": "BANJARPARAKAN RW 11 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.163869, -7.549746000000008] },
+      "properties": { "fdt_id": "BANJARPARAKAN RW 01 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.287862, -7.537890000000013] },
+      "properties": { "fdt_id": "KEDUNGGEDE RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.308448, -7.528451999999985] },
+      "properties": { "fdt_id": "DANARAJA RW 01 SOMAGEDE", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.063673, -7.491664000000018] },
+      "properties": { "fdt_id": "JAMBU RW 01 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2009, -7.436599999999998] },
+      "properties": { "fdt_id": "PANGEBATAN RW 04", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.135532, -7.518723] },
+      "properties": { "fdt_id": "SANGGREMAN RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.289035, -7.532242000000002] },
+      "properties": { "fdt_id": "KEDUNGGEDE RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2588, -7.455400000000001] },
+      "properties": { "fdt_id": "PERUMAHAN KARANGSARI DUSUN II KARANGRAU", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.220828, -7.479829999999986] },
+      "properties": { "fdt_id": "KEDUNGRANDU RW 01 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.120245, -7.555088000000021] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW 06 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0443, -7.515830000000001] },
+      "properties": { "fdt_id": "WANGON RW 15 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.21515, -7.496839999999985] },
+      "properties": { "fdt_id": "NOTOG RW 04 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.09103, -7.474458999999991] },
+      "properties": { "fdt_id": "KALIWANGI RW 03 PURWOKERTO - FDT 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07993, -7.461850000000004] },
+      "properties": { "fdt_id": "WLAHAR RW 06 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.02998, -7.513600000000002] },
+      "properties": { "fdt_id": "PARUNGKAMAL RW 08 LUMBIR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2136, -7.429699999999992] },
+      "properties": { "fdt_id": "PASIRMUNCANG RW 05 PURWOKERTO BARAT", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2203, -7.408199999999992] },
+      "properties": { "fdt_id": "BOBOSAN RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.069494, -7.457652999999985] },
+      "properties": { "fdt_id": "WINDUNEGARA RW 01 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.053691, -7.51869400000002] },
+      "properties": { "fdt_id": "OPEN AREA JL. DAMAR WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.138061, -7.50198699999999] },
+      "properties": { "fdt_id": "SANGGREMAN RW 12 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.143797, -7.394782999999996] },
+      "properties": { "fdt_id": "PERNASIDI RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.315212, -7.515510000000003] },
+      "properties": { "fdt_id": "SOKAWERA RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.28685, -7.511625] },
+      "properties": { "fdt_id": "PEKUNDEN RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.118401, -7.557879000000014] },
+      "properties": { "fdt_id": "PEKUNCEN RW 03 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.153, -7.544400000000005] },
+      "properties": { "fdt_id": "MENGANTI RW 01 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.26, -7.432600000000011] },
+      "properties": { "fdt_id": "SHAPPIRE MEDITERANIA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.356934, -7.614560000000012] },
+      "properties": { "fdt_id": "KEBOKURA RW 03 PURWOKERTO - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2842, -7.421600000000019] },
+      "properties": { "fdt_id": "BOJONGSARI RW 04 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.126406, -7.392109999999994] },
+      "properties": { "fdt_id": "KARANGLO RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.143691, -7.392471000000008] },
+      "properties": { "fdt_id": "RANCAMAYA RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.291015, -7.479895000000008] },
+      "properties": { "fdt_id": "KARANGDADAP RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.265848, -7.590366999999993] },
+      "properties": { "fdt_id": "ADISANA RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.325387, -7.490030999999995] },
+      "properties": { "fdt_id": "SURO RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.232048, -7.342803000000011] },
+      "properties": { "fdt_id": "KARANG TENGAH RW 06 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.118681, -7.563423999999996] },
+      "properties": { "fdt_id": "PEKUNCEN RW 04 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.16443, -7.56107000000001] },
+      "properties": { "fdt_id": "LOSARI RW 03 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.159269, -7.396722000000018] },
+      "properties": { "fdt_id": "LANGGONGSARI RW 07 CILONGOK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2231, -7.449000000000019] },
+      "properties": { "fdt_id": "PERUMAHAN GRIYA ESTETIKA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.291158, -7.583042000000015] },
+      "properties": { "fdt_id": "PAGERALANG RW 06 SAMPAI RW 08 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.318188, -7.460781000000003] },
+      "properties": { "fdt_id": "KALICUPAK KIDUL RW 01 KALIBAGOR BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2131, -7.407100000000004] },
+      "properties": { "fdt_id": "KARANGSALAM KIDUL RW 03 (PARTIAL)", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.255387, -7.578669999999985] },
+      "properties": { "fdt_id": "DUSUN KADUS KEBASEN - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.087787, -7.419984000000004] },
+      "properties": { "fdt_id": "PANCURENDANG RW 07 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2706, -7.430499999999998] },
+      "properties": { "fdt_id": "MERSI RW 06 PURWOKERTO TIMUR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.213, -7.427900000000001] },
+      "properties": { "fdt_id": "REJASARI RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2307, -7.425999999999988] },
+      "properties": { "fdt_id": "KRANJI RW 08 PURWOKERTO TIMUR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2331, -7.381200000000014] },
+      "properties": { "fdt_id": "PERUM PROMPONG ALAM INDAH", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.30039, -7.476059000000001] },
+      "properties": { "fdt_id": "KALIBAGOR RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.188331, -7.365593999999995] },
+      "properties": { "fdt_id": "BASEH RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07739, -7.463740000000008] },
+      "properties": { "fdt_id": "WLAHAR RW 05 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2012, -7.387699999999997] },
+      "properties": { "fdt_id": "KEDUNGBANTENG RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1586, -7.573499999999996] },
+      "properties": { "fdt_id": "LOSARI RW 05 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.149169, -7.402919999999993] },
+      "properties": { "fdt_id": "CILONGOK RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.299173, -7.492314000000002] },
+      "properties": { "fdt_id": "PERUMAHAN BUMI KALIORI PERMAI BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2387, -7.448199999999994] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.130206, -7.404308000000008] },
+      "properties": { "fdt_id": "PERNASIDI RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.248485, -7.493548000000006] },
+      "properties": { "fdt_id": "SOKAWERA KIDUL RW 02 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1713, -7.535699999999988] },
+      "properties": { "fdt_id": "RAWALO RW 07 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.24681, -7.49419100000001] },
+      "properties": { "fdt_id": "SOKAWERA KIDUL RW 01 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.172365, -7.51344599999999] },
+      "properties": { "fdt_id": "SIDAMULIH RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.08241, -7.480759999999995] },
+      "properties": { "fdt_id": "KALIURIP RW 01 PURWOJATI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.300662, -7.537084999999994] },
+      "properties": { "fdt_id": "KEJAWAR RW 05 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.149491, -7.503692999999998] },
+      "properties": { "fdt_id": "TIPAR RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2746, -7.441200000000007] },
+      "properties": { "fdt_id": "GRIYA SHIFA ALAMANDA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3103384, -7.617380099999995] },
+      "properties": { "fdt_id": "NUSAMAGIR RW 03 DAN 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.085552, -7.542772000000015] },
+      "properties": { "fdt_id": "BANTAR RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.312038, -7.531909000000008] },
+      "properties": { "fdt_id": "SOKAWERA RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2012, -7.432299999999989] },
+      "properties": { "fdt_id": "PANGABETAN RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.223744, -7.324781999999994] },
+      "properties": { "fdt_id": "KETENGER RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.230993, -7.557934999999992] },
+      "properties": { "fdt_id": "KALIWEDI RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2097, -7.429499999999991] },
+      "properties": { "fdt_id": "PERUMAHAN GRIYA SATRIA MANDALATAMA (FDT 1)", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.255474, -7.436836] },
+      "properties": { "fdt_id": "PURWOKERTO KIDUL RW 08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.134907, -7.397206000000017] },
+      "properties": { "fdt_id": "PERNASIDI RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.112493, -7.381494] },
+      "properties": { "fdt_id": "KALISARI RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.16011, -7.571450000000002] },
+      "properties": { "fdt_id": "LOSARI RW 04 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.167575, -7.537297999999993] },
+      "properties": { "fdt_id": "BANJARPARAKAN RW 08 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06964, -7.451040000000004] },
+      "properties": { "fdt_id": "TIPAR KIDUL RW 05 AJIBARANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2224, -7.416200000000003] },
+      "properties": { "fdt_id": "KOBER RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2612, -7.433299999999996] },
+      "properties": { "fdt_id": "BERKOH INDAH", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.171003, -7.416620999999985] },
+      "properties": { "fdt_id": "LANGGONGSARI RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2445, -7.389499999999989] },
+      "properties": { "fdt_id": "PABUARAN RW 01 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.26987, -7.36696000000001] },
+      "properties": { "fdt_id": "BANTERAN RW 07 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.070267, -7.514766999999997] },
+      "properties": { "fdt_id": "KLAPAGADING RW 05 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.08892, -7.542626000000006] },
+      "properties": { "fdt_id": "BANTAR RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.225759, -7.327180000000004] },
+      "properties": { "fdt_id": "KETENGER RW 01 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2243, -7.413800000000008] },
+      "properties": { "fdt_id": "KOBER RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.125424, -7.397695999999991] },
+      "properties": { "fdt_id": "CIKIDANG RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.229677, -7.567139000000003] },
+      "properties": { "fdt_id": "RANDEGAN RW 01 KEBASEN - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.254845, -7.362758000000015] },
+      "properties": { "fdt_id": "BANJARSARI WETAN RW 02 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.11562, -7.499570000000007] },
+      "properties": { "fdt_id": "PURWOJATI RW 07 DAN RW 08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.053391, -7.521738000000003] },
+      "properties": { "fdt_id": "WANGON RW 10 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.064419, -7.502935000000011] },
+      "properties": { "fdt_id": "BANTERAN RW 02 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.173458, -7.508587000000013] },
+      "properties": { "fdt_id": "SIDAMULIH RW 06 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2561, -7.498600000000004] },
+      "properties": { "fdt_id": "WLAHAR KULON RW 01 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2638, -7.426199999999989] },
+      "properties": { "fdt_id": "MERSI RW 02 PURWOKERTO TIMUR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2444, -7.384499999999996] },
+      "properties": { "fdt_id": "PERUMAHAN PURI INTAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2949, -7.4857] },
+      "properties": { "fdt_id": "KALIBAGOR RW 07 BANYUMAS (FDT 2)", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2159, -7.485299999999997] },
+      "properties": { "fdt_id": "NOTOG RW 01 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2649, -7.427900000000001] },
+      "properties": { "fdt_id": "MERSI RW 04 PURWOKERTO TIMUR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.214038, -7.517156000000003] },
+      "properties": { "fdt_id": "TUMIYANG RW 02 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.25269, -7.359536999999996] },
+      "properties": { "fdt_id": "BANJARSARI WETAN RW 01 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2975, -7.511599999999989] },
+      "properties": { "fdt_id": "KEDUNGUTER RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.135971, -7.55425400000002] },
+      "properties": { "fdt_id": "KARANGLEWAS RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.218978, -7.534725000000011] },
+      "properties": { "fdt_id": "KEBASEN RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.109903, -7.560938999999982] },
+      "properties": { "fdt_id": "PEKUNCEN RW 06 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.28685, -7.511625] },
+      "properties": { "fdt_id": "PEKUNDEN RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0511, -7.413710000000016] },
+      "properties": { "fdt_id": "KRACAK RW 09 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.11442, -7.528320000000015] },
+      "properties": { "fdt_id": "TUNJUNG RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.19085, -7.552979999999985] },
+      "properties": { "fdt_id": "CINDAGA RW 09 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1084, -7.462054999999999] },
+      "properties": { "fdt_id": "KALITAPEN RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.12071, -7.492079999999985] },
+      "properties": { "fdt_id": "PURWOJATI RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.110402, -7.420027000000005] },
+      "properties": { "fdt_id": "BANJARSARI RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2251, -7.411599999999994] },
+      "properties": { "fdt_id": "KOBER RW 04", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2335, -7.498200000000002] },
+      "properties": { "fdt_id": "MANDIRANCAN RW 04 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.10257, -7.552860000000008] },
+      "properties": { "fdt_id": "BANTAR RW 05 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.075815, -7.489603999999977] },
+      "properties": { "fdt_id": "JAMBU RW 08 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.215856, -7.374293999999992] },
+      "properties": { "fdt_id": "KARANGNANGKA RW 04", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.030381, -7.509237000000017] },
+      "properties": { "fdt_id": "PARUNGKAMAL RW 01 LUMBIR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2482, -7.458900000000003] },
+      "properties": { "fdt_id": "TELUK RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1656, -7.525100000000018] },
+      "properties": { "fdt_id": "PESAWAHAN RW 06 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.134446, -7.411702999999983] },
+      "properties": { "fdt_id": "CIPETE RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.170429, -7.399421999999996] },
+      "properties": { "fdt_id": "LANGGONGSARI RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.119024, -7.521489000000003] },
+      "properties": { "fdt_id": "GENTAWANGI RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.12142, -7.534889999999994] },
+      "properties": { "fdt_id": "TUNJUNG RW 04 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.26718, -7.36051100000001] },
+      "properties": { "fdt_id": "BANTERAN RW 03 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.139026, -7.397579000000003] },
+      "properties": { "fdt_id": "PERNASIDI RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1221, -7.514109999999993] },
+      "properties": { "fdt_id": "GENTAWANGI RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.122807, -7.50876400000001] },
+      "properties": { "fdt_id": "PURWOJATI RW 06 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2172, -7.419900000000008] },
+      "properties": { "fdt_id": "REJASARI RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.303, -7.478399999999992] },
+      "properties": { "fdt_id": "KALIBAGOR RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.228707, -7.364377999999983] },
+      "properties": { "fdt_id": "KEBUMEN RW 03 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.100943, -7.406522999999985] },
+      "properties": { "fdt_id": "KALIBENDA RW 01 AJIBARANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.225843, -7.556117999999992] },
+      "properties": { "fdt_id": "KALIWEDI RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.103329, -7.484129999999993] },
+      "properties": { "fdt_id": "KARANGTALUN KIDUL RW 03 PURWOKERTO - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.291921, -7.538531999999996] },
+      "properties": { "fdt_id": "KEJAWAR RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2199, -7.405999999999997] },
+      "properties": { "fdt_id": "BOBOSAN RW 03 - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2569, -7.450300000000007] },
+      "properties": { "fdt_id": "PERUMNAS TELUK RW 09", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.126604, -7.513596000000011] },
+      "properties": { "fdt_id": "SANGGREMAN RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2983, -7.479399999999998] },
+      "properties": { "fdt_id": "KALIBAGOR RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.147167, -7.507325000000011] },
+      "properties": { "fdt_id": "TIPAR RW 07 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.131853, -7.537616000000005] },
+      "properties": { "fdt_id": "ADISARA RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2155, -7.487899999999994] },
+      "properties": { "fdt_id": "NOTOG RW 02 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2365, -7.386500000000009] },
+      "properties": { "fdt_id": "KUTASARI RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2379, -7.457699999999996] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 06 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.233763, -7.568287999999987] },
+      "properties": { "fdt_id": "RANDEGAN RW 01 KEBASEN - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1815, -7.533700000000014] },
+      "properties": { "fdt_id": "RAWALO RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.337564, -7.602150999999986] },
+      "properties": { "fdt_id": "KEDUNGPRING RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.079965, -7.399243000000013] },
+      "properties": { "fdt_id": "PANDANSARI RW 01 AJIBARANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2619, -7.500599999999997] },
+      "properties": { "fdt_id": "WLAHAR KULON RW 02 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.273542, -7.585902000000003] },
+      "properties": { "fdt_id": "SIDAMULYA RW 03 DAN 04 PURWOKERTO - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2829, -7.393699999999996] },
+      "properties": { "fdt_id": "LINGGASARI RW 05 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.289358, -7.401464000000006] },
+      "properties": { "fdt_id": "PURBADANA RW 02 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2501, -7.3911] },
+      "properties": { "fdt_id": "KEDUNGMALANG RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2099, -7.431300000000003] },
+      "properties": { "fdt_id": "PERUMAHAN GRIYA SATRIA MANDALATAMA (FDT 2)", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.314488, -7.416169999999999] },
+      "properties": { "fdt_id": "KRAMAT RW 02 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.218998, -7.425239999999995] },
+      "properties": { "fdt_id": "BANTARSOKA RW 10", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.224928, -7.345992999999984] },
+      "properties": { "fdt_id": "KARANG TENGAH RW 08 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.10285, -7.531160000000005] },
+      "properties": { "fdt_id": "TINGGARJAYA DUSUN I", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2074, -7.396199999999993] },
+      "properties": { "fdt_id": "KEBOCORAN RW 01 KEDUNGBANTENG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2905, -7.418000000000015] },
+      "properties": { "fdt_id": "KEMBARAN RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.054534, -7.513778000000002] },
+      "properties": { "fdt_id": "OPEN AREA JL. KARANG JENGKOL WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3131308, -7.6174176] },
+      "properties": { "fdt_id": "NUSAMANGIR RW 01 DAN 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.09054, -7.526450000000007] },
+      "properties": { "fdt_id": "TINGGARJAYA DUSUN III - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07761, -7.485001000000018] },
+      "properties": { "fdt_id": "JAMBU RW 09 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1505, -7.550700000000006] },
+      "properties": { "fdt_id": "MENGANTI RW 05 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.193, -7.523300000000006] },
+      "properties": { "fdt_id": "TAMBAKNEGARA RW 02 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07632, -7.340930000000014] },
+      "properties": { "fdt_id": "OPEN AREA JL. DAWUHAN PEKUNCEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.116412, -7.411919000000009] },
+      "properties": { "fdt_id": "BANJARSARI RW 05 AJIBARANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.074317, -7.522075000000008] },
+      "properties": { "fdt_id": "KLAPAGADING RW 01 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.05039, -7.50690399999999] },
+      "properties": { "fdt_id": "JAMBU RW 12 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.289335, -7.468177000000001] },
+      "properties": { "fdt_id": "KARANGDADAP RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.256563, -7.352060999999994] },
+      "properties": { "fdt_id": "BANJARSARI WETAN RW 03 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.284163, -7.58384899999998] },
+      "properties": { "fdt_id": "PAGERALANG RW 01 SAMPAI 05 PURWOKERTO - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2122, -7.419700000000007] },
+      "properties": { "fdt_id": "REJASARI RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.267816, -7.585704999999989] },
+      "properties": { "fdt_id": "ADISANA RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.247121, -7.336338000000007] },
+      "properties": { "fdt_id": "KOTAYASA RT 01 SAMPAI RT 04 SUMBANG - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.074934, -7.520118999999998] },
+      "properties": { "fdt_id": "KLAPAGADING RW 02 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2988, -7.515800000000016] },
+      "properties": { "fdt_id": "KEDUNGUTER RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.02382, -7.535400000000005] },
+      "properties": { "fdt_id": "RANDEGAN RW 10 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.296, -7.484800000000014] },
+      "properties": { "fdt_id": "KALIBAGOR RW 07 BANYUMAS (FDT 1)", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.12178, -7.532389999999998] },
+      "properties": { "fdt_id": "TUNJUNG RW 03 JATILAWANG - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.313739, -7.427169999999991] },
+      "properties": { "fdt_id": "BANJAR ANYAR RW 06 PURWOKERTO - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.18714, -7.543519999999995] },
+      "properties": { "fdt_id": "CINDAGA RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2488, -7.425299999999984] },
+      "properties": { "fdt_id": "PURWOKERTO LOR RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2492, -7.388700000000004] },
+      "properties": { "fdt_id": "SAFFIRE REGENCY PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.21939, -7.475463999999992] },
+      "properties": { "fdt_id": "KEDUNGRANDU RW 02 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2232, -7.495200000000002] },
+      "properties": { "fdt_id": "MANDIRANCAN RW 01 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1672, -7.520299999999986] },
+      "properties": { "fdt_id": "PESAWAHAN RW 04 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.238066, -7.361437999999991] },
+      "properties": { "fdt_id": "REMPOAH RW 04 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.260459, -7.358485000000003] },
+      "properties": { "fdt_id": "BANTERAN RW 01 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06823, -7.339719999999998] },
+      "properties": { "fdt_id": "OPEN AREA JL. BUMIAYU PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1783, -7.533800000000015] },
+      "properties": { "fdt_id": "RAWALO RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2126, -7.404799999999989] },
+      "properties": { "fdt_id": "KARANGSALAM KIDUL RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2823, -7.396499999999994] },
+      "properties": { "fdt_id": "LINGGASARI RW 06 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.05784, -7.410599999999987] },
+      "properties": { "fdt_id": "KRACAK RW 05 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07664, -7.454919999999994] },
+      "properties": { "fdt_id": "WINDUNEGARA RW 05 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04087, -7.495010000000009] },
+      "properties": { "fdt_id": "JURANGBAHAS RW 01 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.033427, -7.502792000000009] },
+      "properties": { "fdt_id": "CANDUK RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2321, -7.385] },
+      "properties": { "fdt_id": "KUTASARI RW 04", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2449, -7.425800000000007] },
+      "properties": { "fdt_id": "OPEN AREA KAUMAN LAMA JL. JEND SUPRAPTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.245, -7.460399999999994] },
+      "properties": { "fdt_id": "PERUM PAMUJAN INDAH RW 10", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2469, -7.424000000000015] },
+      "properties": { "fdt_id": "PURWOKERTO LOR RW 04", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2163, -7.408600000000014] },
+      "properties": { "fdt_id": "KARANGSALAM KIDUL RW 04 KEDUNGBANTENG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2461, -7.463599999999994] },
+      "properties": { "fdt_id": "TELUK RW 12 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.268642, -7.593820999999988] },
+      "properties": { "fdt_id": "SIDAMULYA RW 01 KEMRANJEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.138666, -7.412871999999984] },
+      "properties": { "fdt_id": "CILONGOK RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.21729, -7.423277000000006] },
+      "properties": { "fdt_id": "BANTARSOKA RW 04", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07243, -7.468150000000005] },
+      "properties": { "fdt_id": "WLAHAR RW 04 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.116228, -7.476640000000012] },
+      "properties": { "fdt_id": "KALIWANGI RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.112694, -7.471649000000005] },
+      "properties": { "fdt_id": "KALIWANGI RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.128874, -7.529345999999995] },
+      "properties": { "fdt_id": "GENTAWANGI RW 05 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.188175, -7.441327000000005] },
+      "properties": { "fdt_id": "OPEN AREA JL. RAYA TAMANSARI - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.122111, -7.400696000000011] },
+      "properties": { "fdt_id": "CIKIDANG RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1964, -7.449600000000003] },
+      "properties": { "fdt_id": "KEDIRI RW 06 KARANGLEWAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.09155, -7.527809999999984] },
+      "properties": { "fdt_id": "TINGGARJAYA DUSUN III - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.267954, -7.358190999999998] },
+      "properties": { "fdt_id": "BANTERAN RW 02 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.140695, -7.434022000000002] },
+      "properties": { "fdt_id": "KASEGERAN RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.02326, -7.535809999999996] },
+      "properties": { "fdt_id": "RANDEGAN RW 11 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.069447, -7.454820000000013] },
+      "properties": { "fdt_id": "WINDUNEGARA RW 03 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.234828, -7.475619999999989] },
+      "properties": { "fdt_id": "OPEN AREA JL. GN. TUGEL PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2372, -7.415299999999998] },
+      "properties": { "fdt_id": "SOKANEGARA RW 08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.137145, -7.404496999999999] },
+      "properties": { "fdt_id": "CILONGOK RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.291018, -7.517321000000006] },
+      "properties": { "fdt_id": "PEKUNDEN RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.308011, -7.528796999999994] },
+      "properties": { "fdt_id": "DANARAJA RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2212, -7.413500000000006] },
+      "properties": { "fdt_id": "KOBER RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04154, -7.421799999999981] },
+      "properties": { "fdt_id": "DUSUN I, II, III, IV BANYUMAS - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.112386, -7.558560999999989] },
+      "properties": { "fdt_id": "PEKUNCEN RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.149348, -7.442732000000007] },
+      "properties": { "fdt_id": "KASEGERAN RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2458, -7.422300000000003] },
+      "properties": { "fdt_id": "OPEN AREA GELORA INDAH MANGUNJAYA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.099983, -7.412557999999983] },
+      "properties": { "fdt_id": "KALIBENDA RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.139425, -7.391302999999989] },
+      "properties": { "fdt_id": "RANCAMAYA RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.13639, -7.541620000000002] },
+      "properties": { "fdt_id": "MARGASANA RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07004, -7.474999999999989] },
+      "properties": { "fdt_id": "WLAHAR RW 01 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.214408, -7.502687999999997] },
+      "properties": { "fdt_id": "TUMIYANG RW 01 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.09085, -7.533019999999986] },
+      "properties": { "fdt_id": "TINGGARJAYA DUSUN II", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.227029, -7.472259999999999] },
+      "properties": { "fdt_id": "PERUMAHAN BUKIT RISCON CITRA PESONA BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.314488, -7.416169999999999] },
+      "properties": { "fdt_id": "KRAMAT RW 01 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.252, -7.395600000000009] },
+      "properties": { "fdt_id": "KEDUNGMALANG RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.323565, -7.505134000000002] },
+      "properties": { "fdt_id": "SROWOT RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.078534181482, -7.357582765663262] },
+      "properties": { "fdt_id": "BANJARANYAR RW 01 PEKUNCEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.151809, -7.490337000000014] },
+      "properties": { "fdt_id": "TIPAR RW 01 PURWOKERTO - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06958, -7.549411999999991] },
+      "properties": { "fdt_id": "PENGADEGAN JL. KEBANGGAN WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1556, -7.544999999999988] },
+      "properties": { "fdt_id": "MENGANTI RW 03 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2588, -7.39429999999998] },
+      "properties": { "fdt_id": "PERUMAHAN SOGRA PURI INDAH", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.318227, -7.435126] },
+      "properties": { "fdt_id": "BANJAR ANYAR RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.139037, -7.566323000000013] },
+      "properties": { "fdt_id": "KARANGLEWAS RW 03 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2108, -7.39879999999999] },
+      "properties": { "fdt_id": "KEBOCORAN RW 03 KEDUNGBANTENG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.088335, -7.380650999999993] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 06 PEKUNCEN PURWOKERTO - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06045, -7.401450000000008] },
+      "properties": { "fdt_id": "KRACAK RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.11327, -7.533639999999986] },
+      "properties": { "fdt_id": "TUNJUNG RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.17445, -7.54649000000001] },
+      "properties": { "fdt_id": "CINDAGA RW 13 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1843, -7.521299999999993] },
+      "properties": { "fdt_id": "TAMBAKNEGARA RW 06 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1671, -7.527099999999991] },
+      "properties": { "fdt_id": "PESAWAHAN RW 01 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2002, -7.392599999999989] },
+      "properties": { "fdt_id": "KEDUNGBANTENG RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.323773, -7.513106999999999] },
+      "properties": { "fdt_id": "SROWOT RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.27285, -7.382119999999976] },
+      "properties": { "fdt_id": "SUMBANG RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.250917, -7.335802000000003] },
+      "properties": { "fdt_id": "KOTAYASA RT 01 SAMPAI RT 04 SUMBANG - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2551, -7.453300000000008] },
+      "properties": { "fdt_id": "PERUMNAS TELUK RW.08", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.306979, -7.401818] },
+      "properties": { "fdt_id": "SAMBENG WETAN RW 02 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.139601, -7.511943999999994] },
+      "properties": { "fdt_id": "SANGGREMAN RW 09 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.176477, -7.417177000000006] },
+      "properties": { "fdt_id": "LANGGONGSARI RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2415, -7.449700000000004] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.247991, -7.467712999999998] },
+      "properties": { "fdt_id": "PERUMAHAN GRAHA TELUK PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.29102, -7.517321000000006] },
+      "properties": { "fdt_id": "PEKUNDEN RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07904, -7.512920000000014] },
+      "properties": { "fdt_id": "GERDUREN RW 03 PURWOJATI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.111216, -7.388813000000001] },
+      "properties": { "fdt_id": "KALISARI RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.170237, -7.40415899999999] },
+      "properties": { "fdt_id": "LANGGONGSARI RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.137787, -7.514526999999984] },
+      "properties": { "fdt_id": "SANGGREMAN RW 07 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1119, -7.558825000000009] },
+      "properties": { "fdt_id": "PEKUNCEN RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.216291, -7.441812000000006] },
+      "properties": { "fdt_id": "PERUMAHAN PRAJA WIJAYA KUSUMA PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.306111, -7.401344999999992] },
+      "properties": { "fdt_id": "SAMBENG KULON RW 02 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.314221, -7.462674999999999] },
+      "properties": { "fdt_id": "PETIR RW 03 KALIBAGOR BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.172285, -7.430569999999994] },
+      "properties": { "fdt_id": "PEJOGOL RW 03 CILONGOK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2302, -7.384700000000017] },
+      "properties": { "fdt_id": "KUTASARI RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.337784, -7.615722000000014] },
+      "properties": { "fdt_id": "PANDAK RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07678, -7.360289999999989] },
+      "properties": { "fdt_id": "BANJARANYAR RW 04 PEKUNCEN - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2175, -7.439600000000017] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW 04 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.133725, -7.514884999999989] },
+      "properties": { "fdt_id": "SANGGREMAN RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.156857, -7.410598999999984] },
+      "properties": { "fdt_id": "PAGERAJI RW 09 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.170124, -7.513195999999988] },
+      "properties": { "fdt_id": "SIDAMULIH RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2817, -7.419000000000002] },
+      "properties": { "fdt_id": "BOJONGSARI RW 02 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.210444, -7.436339000000006] },
+      "properties": { "fdt_id": "PANGEBATAN RW 07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.13567, -7.538520000000002] },
+      "properties": { "fdt_id": "MARGASANA RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.13211, -7.538500000000006] },
+      "properties": { "fdt_id": "ADISARA RW 03 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2254, -7.494099999999994] },
+      "properties": { "fdt_id": "MANDIRANCAN RW 02 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.260234, -7.406543000000001] },
+      "properties": { "fdt_id": "PERUM SAPHIRE REGENCY KARANGWANGKAL - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.27994, -7.581667999999999] },
+      "properties": { "fdt_id": "PAGERALANG RW 01 SAMPAI 05 PURWOKERTO - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.18552, -7.543319999999993] },
+      "properties": { "fdt_id": "CINDAGA RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1744, -7.538600000000006] },
+      "properties": { "fdt_id": "RAWALO RW 06 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.27134, -7.532475999999999] },
+      "properties": { "fdt_id": "PASINGGANGAN RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2821, -7.423399999999991] },
+      "properties": { "fdt_id": "BOJONGSARI RW 08 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.259576, -7.403630999999988] },
+      "properties": { "fdt_id": "PERUM SAPHIRE REGENCY KARANGWANGKAL - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.235859, -7.357963000000018] },
+      "properties": { "fdt_id": "REMPOAH RW 02 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2778, -7.472299999999992] },
+      "properties": { "fdt_id": "PEKAJA RW 03 KALIBAGOR BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.203, -7.384499999999996] },
+      "properties": { "fdt_id": "KEDUNGBANTENG RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.261548, -7.512250999999996] },
+      "properties": { "fdt_id": "PAPRINGAN RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2346, -7.49189999999998] },
+      "properties": { "fdt_id": "PEGALONGAN RW 01 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.261088, -7.381064000000013] },
+      "properties": { "fdt_id": "TAMBAKSOGRA RW 03 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.11494, -7.531299999999979] },
+      "properties": { "fdt_id": "TUNJUNG RW 03 JATILAWANG - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.02905, -7.421770000000016] },
+      "properties": { "fdt_id": "DUSUN I, II, III, IV BANYUMAS - FDT 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06388, -7.516110000000007] },
+      "properties": { "fdt_id": "OPEN AREA JL. VETERAN SUNARTO WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04079, -7.548699999999993] },
+      "properties": { "fdt_id": "RAWAHENG RW 01 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.24639, -7.499650000000011] },
+      "properties": { "fdt_id": "PAPRINGAN RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.100984, -7.460123000000016] },
+      "properties": { "fdt_id": "KALITAPEN RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2824, -7.421500000000019] },
+      "properties": { "fdt_id": "BOJONGSARI RW 03 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.135438, -7.476952000000008] },
+      "properties": { "fdt_id": "KARANGMANGU RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.084496, -7.392264000000006] },
+      "properties": { "fdt_id": "OPEN AREA JL CURUGAWU PANDASARI BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2132, -7.434400000000004] },
+      "properties": { "fdt_id": "PASIRMUNCANG RW 06 PURWOKERTO BARAT", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.190364, -7.425973999999995] },
+      "properties": { "fdt_id": "TAMANSARI KARANGLEWAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.306107, -7.401348000000021] },
+      "properties": { "fdt_id": "SAMBENG KULON RW 01 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.326334, -7.514236000000007] },
+      "properties": { "fdt_id": "SROWOT RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07391, -7.396350000000014] },
+      "properties": { "fdt_id": "CIBERUNG RW 06 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.14261, -7.570539999999988] },
+      "properties": { "fdt_id": "LOSARI RW 06 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2185, -7.419000000000002] },
+      "properties": { "fdt_id": "REJASARI RW 06", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.146544, -7.512177000000008] },
+      "properties": { "fdt_id": "TIPAR RW 09 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1863, -7.530200000000011] },
+      "properties": { "fdt_id": "TAMBAKNEGARA RW 04 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2221, -7.438700000000011] },
+      "properties": { "fdt_id": "TANJUNG RW 02 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2349, -7.386100000000006] },
+      "properties": { "fdt_id": "KUTASARI RW 07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.242784, -7.503471999999998] },
+      "properties": { "fdt_id": "PAPRINGAN RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1926, -7.553130000000006] },
+      "properties": { "fdt_id": "CINDAGA RW 08 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.20232, -7.371219999999985] },
+      "properties": { "fdt_id": "DAWUHAN WETAN RW 02 KEDUNGBANTENG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.310156, -7.524759999999984] },
+      "properties": { "fdt_id": "SOKAWERA RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.164997, -7.538660999999998] },
+      "properties": { "fdt_id": "OPEN AREA JL. SUNGAI PAPAQ RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07808, -7.366149999999996] },
+      "properties": { "fdt_id": "OPEN AREA JL BANJARANYAR PASIRAMAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2738, -7.425000000000002] },
+      "properties": { "fdt_id": "LEDUG RW 04 (PARTIAL)", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.106029, -7.462086000000006] },
+      "properties": { "fdt_id": "KALITAPEN RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0983, -7.478849999999994] },
+      "properties": { "fdt_id": "KALIURIP RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.29924, -7.40722999999999] },
+      "properties": { "fdt_id": "SAMBENG KULON RW 03 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2465, -7.454299999999994] },
+      "properties": { "fdt_id": "TELUK RW 04 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.256415, -7.330552000000008] },
+      "properties": { "fdt_id": "KOTAYASA RW 06 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.026551, -7.511632999999982] },
+      "properties": { "fdt_id": "DUSUN I, III BANYUMAS - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.237664, -7.360451000000021] },
+      "properties": { "fdt_id": "REMPOAH RW 03 BATURRADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3026604, -7.626290790000018] },
+      "properties": { "fdt_id": "SIBALUNG RW 10 DAN 11 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.130722, -7.417016999999997] },
+      "properties": { "fdt_id": "CIPETE RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.130722, -7.417016999999997] },
+      "properties": { "fdt_id": "CIPETE RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.02478, -7.533629999999998] },
+      "properties": { "fdt_id": "RANDEGAN RW 06 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.001439, -7.51175000000001] },
+      "properties": { "fdt_id": "BESUKI RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.070186, -7.457378000000013] },
+      "properties": { "fdt_id": "WINDUNEGARA RW 02 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2813, -7.480999999999989] },
+      "properties": { "fdt_id": "PEKAJA RW 02 KALIBAGOR BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2453, -7.391899999999985] },
+      "properties": { "fdt_id": "PABUARAN RW 02 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.071073, -7.448860999999988] },
+      "properties": { "fdt_id": "TIPAR KIDUL RW 04 AJIBARANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.097777, -7.488932000000011] },
+      "properties": { "fdt_id": "KARANGTALUN KIDUL RW 07 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.209, -7.4004] },
+      "properties": { "fdt_id": "KEBOCORAN RW 04 KEDUNGBANTENG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.085477, -7.372395000000003] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 06 PEKUNCEN PURWOKERTO - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.111762, -7.406798000000016] },
+      "properties": { "fdt_id": "BANJARSARI RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06313, -7.516219999999995] },
+      "properties": { "fdt_id": "OPEN AREA JL. PROGO WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.18334, -7.547509999999993] },
+      "properties": { "fdt_id": "CINDAGA RW 11 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2227, -7.410899999999989] },
+      "properties": { "fdt_id": "KOBER RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04663, -7.505990000000004] },
+      "properties": { "fdt_id": "JURANGBAHAS RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.15256, -7.55496999999999] },
+      "properties": { "fdt_id": "LOSARI RW 01 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.078377, -7.487164000000009] },
+      "properties": { "fdt_id": "JAMBU RW 10 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.236, -7.453000000000005] },
+      "properties": { "fdt_id": "KARANGKLESEM RW 5", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2016, -7.448299999999994] },
+      "properties": { "fdt_id": "KEDIRI RW 02 KARANGLEWAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.224816, -7.345805000000016] },
+      "properties": { "fdt_id": "KARANG TENGAH RW 02 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.08789, -7.482819999999997] },
+      "properties": { "fdt_id": "KALIURIP RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.03481, -7.536259999999999] },
+      "properties": { "fdt_id": "RANDEGAN RW 04 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.076903, -7.511088999999995] },
+      "properties": { "fdt_id": "GEDUREN RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.217268, -7.426352000000016] },
+      "properties": { "fdt_id": "BANTARSOKA RW 11", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2308, -7.455700000000003] },
+      "properties": { "fdt_id": "GRIYA SATRIA BUKIT PERMATA BERSOLEH", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.148607, -7.500831000000005] },
+      "properties": { "fdt_id": "TIPAR RW 03 DAN 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.156939, -7.427142000000013] },
+      "properties": { "fdt_id": "PAGERAJI RW 08 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.152495, -7.409482999999993] },
+      "properties": { "fdt_id": "PAGERAJI RW 10 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.098177, -7.473957000000022] },
+      "properties": { "fdt_id": "KALIWANGI RW 03 PURWOKERTO - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.13739, -7.541869999999983] },
+      "properties": { "fdt_id": "KARANGANYAR RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0651, -7.542440000000004] },
+      "properties": { "fdt_id": "OPEN AREA JL. PANGADEGAN WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.318553, -7.530693000000015] },
+      "properties": { "fdt_id": "SOKAWERA RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.063875, -7.498935999999987] },
+      "properties": { "fdt_id": "BANTERAN RW 01 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.060975, -7.489377999999983] },
+      "properties": { "fdt_id": "JAMBU RW 06 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.11927, -7.397849000000001] },
+      "properties": { "fdt_id": "KARANGLO RW 02 CILONGOK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.226429, -7.565720000000001] },
+      "properties": { "fdt_id": "KALIWEDI RW 05 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.20145, -7.536599999999993] },
+      "properties": { "fdt_id": "KEBASEN RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.09656, -7.512599999999996] },
+      "properties": { "fdt_id": "GERDUREN RW 08 PURWOJATI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2444, -7.449800000000004] },
+      "properties": { "fdt_id": "PERUMAHAN GRIYA MULAWARMAN INDAH", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.18446, -7.363430000000002] },
+      "properties": { "fdt_id": "BASEH RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.262513, -7.590206999999984] },
+      "properties": { "fdt_id": "ADISANA RW 10 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.05188, -7.408269999999987] },
+      "properties": { "fdt_id": "KRACAK RW 11 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.19721, -7.37201999999999] },
+      "properties": { "fdt_id": "DAWUHAN WETAN RW 04 KEDUNGBANTENG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1848, -7.534900000000002] },
+      "properties": { "fdt_id": "RAWALO RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.361728, -7.611541999999982] },
+      "properties": { "fdt_id": "SUMPIUH RW 02 PURWOKERTO - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07247, -7.52571699999999] },
+      "properties": { "fdt_id": "KLAPAGADING RW 10 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.317919, -7.451455000000009] },
+      "properties": { "fdt_id": "KALISOGRA WETAN RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.09541, -7.551469999999987] },
+      "properties": { "fdt_id": "BANTAR RW 04 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.067691, -7.521383000000005] },
+      "properties": { "fdt_id": "KLAPAGADING RW 11 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.177129, -7.518934999999995] },
+      "properties": { "fdt_id": "SIDAMULIH RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2566, -7.453599999999989] },
+      "properties": { "fdt_id": "PERUMNAS TELUK RW.07", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2193, -7.411999999999996] },
+      "properties": { "fdt_id": "PERUMAHAN KOBER RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.20203, -7.374850000000013] },
+      "properties": { "fdt_id": "DAWUHAN WETAN RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.149233, -7.481060000000017] },
+      "properties": { "fdt_id": "KARANGMANGU RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.241081, -7.373973000000012] },
+      "properties": { "fdt_id": "SAPPHIRE VILLAGE", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2132, -7.431500000000004] },
+      "properties": { "fdt_id": "PASIRMUNCANG RW 07 PURWOKERTO BARAT", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.219731, -7.374773999999999] },
+      "properties": { "fdt_id": "KARANGNANGKA RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.361739, -7.613384999999995] },
+      "properties": { "fdt_id": "SUMPIUH RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.329574, -7.597581] },
+      "properties": { "fdt_id": "KEDUNGPRING RW 02 PURWOKERTO - FDT 1", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.36605323873, -7.617226998623858] },
+      "properties": { "fdt_id": "SUMPIUH RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.293321, -7.510134999999998] },
+      "properties": { "fdt_id": "SUDAGARAN RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.104495, -7.463817000000004] },
+      "properties": { "fdt_id": "KALITAPEN RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06598, -7.423270000000006] },
+      "properties": { "fdt_id": "KARANGBAWANG RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0784, -7.525290000000011] },
+      "properties": { "fdt_id": "TINGGARJAYA DUSUN IV", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.074532, -7.517833000000003] },
+      "properties": { "fdt_id": "KLAPAGADING RW 03 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.349209, -7.614068000000012] },
+      "properties": { "fdt_id": "PANDAK RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.161909, -7.420172000000012] },
+      "properties": { "fdt_id": "PAGERAJI RW 05 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07702, -7.554100000000008] },
+      "properties": { "fdt_id": "PENGADEGAN RW 07 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.287806, -7.479236000000018] },
+      "properties": { "fdt_id": "KARANGDADAP RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.059696, -7.478045000000016] },
+      "properties": { "fdt_id": "OPEN AREA JL. MASJID SAKA TUNGGAL WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.062438, -7.486911999999981] },
+      "properties": { "fdt_id": "JAMBU RW 07 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [108.9948310900893, -7.510861324567846] },
+      "properties": { "fdt_id": "BESUKI RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.092659, -7.486618999999999] },
+      "properties": { "fdt_id": "KARANGTALUN KIDUL RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04188, -7.497980000000004] },
+      "properties": { "fdt_id": "JURANGBAHAS RW 03 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0249455472007, -7.496530782374188] },
+      "properties": { "fdt_id": "CANDUK RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.112498, -7.381492999999997] },
+      "properties": { "fdt_id": "KALISARI RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.15464, -7.557780000000016] },
+      "properties": { "fdt_id": "LOSARI RW 02 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.31688, -7.423240000000002] },
+      "properties": { "fdt_id": "KRAMAT RW 03 KEMBARAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2511, -7.393399999999994] },
+      "properties": { "fdt_id": "KEDUNGMALANG RW 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.178969, -7.429193999999992] },
+      "properties": { "fdt_id": "PEJOGOL RW 01 CILONGOK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.03234, -7.499419999999986] },
+      "properties": { "fdt_id": "CANDUK RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.206457, -7.437001000000003] },
+      "properties": { "fdt_id": "PANGEBATAN RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.219722, -7.374773999999999] },
+      "properties": { "fdt_id": "KARANGNANGKA RW 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.148675, -7.410260999999996] },
+      "properties": { "fdt_id": "CILONGOK RW 06 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3010456, -7.626556099999988] },
+      "properties": { "fdt_id": "SIBALUNG RW 12 DAN 13 PURWOKERTO - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.170159, -7.403315999999984] },
+      "properties": { "fdt_id": "LANGGONGSARI RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.110061, -7.554916999999981] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW 02 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.131248, -7.474309999999993] },
+      "properties": { "fdt_id": "KARANGMANGU RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1544, -7.547000000000001] },
+      "properties": { "fdt_id": "MENGANTI RW 02 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.17578, -7.423202999999998] },
+      "properties": { "fdt_id": "PEJOGOL RW 02 CILONGOK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.046003, -7.515782999999989] },
+      "properties": { "fdt_id": "WANGON RW 12 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.272992, -7.469400000000013] },
+      "properties": { "fdt_id": "DUSUN III KALIKIDANG SOKARAJA BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.108175, -7.538874999999998] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW 03 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04964, -7.467350000000019] },
+      "properties": { "fdt_id": "CIKAKAK RW 07 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.215859, -7.374295999999978] },
+      "properties": { "fdt_id": "KARANGNANGKA RW 05", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.339238, -7.595111000000008] },
+      "properties": { "fdt_id": "KEDUNGPRING RW 03 DAN 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.10883, -7.52296999999998] },
+      "properties": { "fdt_id": "TUNJUNG RW 05 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.20123, -7.530589999999986] },
+      "properties": { "fdt_id": "GAMBARSARI RW 01 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.189306, -7.434618999999998] },
+      "properties": { "fdt_id": "OPEN AREA JL. RAYA TAMANSARI - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1577, -7.550800000000006] },
+      "properties": { "fdt_id": "MENGANTI RW 06 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.275909, -7.586942999999984] },
+      "properties": { "fdt_id": "SIDAMULYA RW 03 DAN 04 PURWOKERTO - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.071569, -7.517220000000002] },
+      "properties": { "fdt_id": "KLAPAGADING RW 06 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.173689, -7.432648999999989] },
+      "properties": { "fdt_id": "PEJOGOL RW 04 CILONGOK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.119725, -7.55505199999998] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW 05 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2172, -7.413500000000006] },
+      "properties": { "fdt_id": "KOBER RW 06", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2092, -7.398300000000006] },
+      "properties": { "fdt_id": "KEBOCORAN RW 02 KEDUNGBANTENG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07063, -7.40495000000001] },
+      "properties": { "fdt_id": "OPEN AREA JL SERMA YUDA SEMITA AJIBARANG KULON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1909, -7.523500000000007] },
+      "properties": { "fdt_id": "TAMBAKNEGARA RW 01 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07048, -7.470120000000014] },
+      "properties": { "fdt_id": "WLAHAR RW 03 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.217607, -7.426151999999995] },
+      "properties": { "fdt_id": "BANTARSOKA RW 09", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.063, -7.498886999999989] },
+      "properties": { "fdt_id": "JAMBU RW 03 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.111121, -7.554919000000007] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW 01 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1555, -7.549599999999998] },
+      "properties": { "fdt_id": "MENGANTI RW 04 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.10482, -7.473672999999986] },
+      "properties": { "fdt_id": "KALIWANGI RW 03 PURWOKERTO - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07243, -7.367500000000005] },
+      "properties": { "fdt_id": "BANJARANYAR RW 04 PEKUNCEN - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.256012, -7.507334000000016] },
+      "properties": { "fdt_id": "PAPRINGAN RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3128848, -7.616650600000008] },
+      "properties": { "fdt_id": "SIBALUNG RW 03 DAN 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07424, -7.502579999999995] },
+      "properties": { "fdt_id": "BANTERAN RW 03 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.14144, -7.471599999999987] },
+      "properties": { "fdt_id": "KARANGMANGU RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.107666, -7.40844899999999] },
+      "properties": { "fdt_id": "BANJARSARI RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07521, -7.554609999999999] },
+      "properties": { "fdt_id": "PENGADEGAN RW 09 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.19304, -7.545500000000011] },
+      "properties": { "fdt_id": "CINDAGA RW 05 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.208758, -7.529146999999996] },
+      "properties": { "fdt_id": "GAMBARSARI RW 04 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.12587, -7.503299999999995] },
+      "properties": { "fdt_id": "PURWOJATI RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2471, -7.394099999999999] },
+      "properties": { "fdt_id": "PABUARAN RW 05 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.17254, -7.547620000000002] },
+      "properties": {
+        "fdt_id": "OPEN AREA JALAN LKR SAMPIR KELURAHAN CINDAGA PURWOKERTO",
+        "type": "FDT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.08273, -7.519380000000004] },
+      "properties": { "fdt_id": "GERDUREN RW 04 PURWOJATI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0496, -7.534099999999997] },
+      "properties": { "fdt_id": "OPEN AREA JL. RAYA CILACAP WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.12035, -7.491659999999987] },
+      "properties": { "fdt_id": "PURWOJATI RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.19585, -7.535300000000005] },
+      "properties": { "fdt_id": "KEBASEN RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.216279, -7.374339999999981] },
+      "properties": { "fdt_id": "KARANGNANGKA RW 06", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.145082, -7.41217599999999] },
+      "properties": { "fdt_id": "CILONGOK RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0655, -7.404189999999997] },
+      "properties": { "fdt_id": "KRACAK RW 01 AJIBARANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.206332, -7.528761999999995] },
+      "properties": { "fdt_id": "GAMBARSARI RW 03 KEBASEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3002431, -7.620258299999989] },
+      "properties": { "fdt_id": "SIBALUNG RW 12 DAN 13 PURWOKERTO - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.052186, -7.527866999999984] },
+      "properties": { "fdt_id": "KLAPAGADING KULON RW 10", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.19823, -7.550409999999992] },
+      "properties": { "fdt_id": "CINDAGA RW 06 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.159269, -7.396722000000018] },
+      "properties": { "fdt_id": "LANGGONGSARI RW 06 CILONGOK", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.077342, -7.484266999999997] },
+      "properties": { "fdt_id": "JAMBU RW 11 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.100392, -7.486874999999998] },
+      "properties": { "fdt_id": "KARANGTALUN KIDUL RW 03 PURWOKERTO - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.318313, -7.628267000000002] },
+      "properties": { "fdt_id": "SIBALUNG RW 07 DAN 08 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.19325, -7.540870000000018] },
+      "properties": { "fdt_id": "CINDAGA RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1576, -7.551700000000013] },
+      "properties": { "fdt_id": "MENGANTI RW 07 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.116603, -7.539807999999997] },
+      "properties": { "fdt_id": "KEDUNGWRINGIN RW 04 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04135, -7.419540000000017] },
+      "properties": { "fdt_id": "DUSUN I, II, III, IV BANYUMAS - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.336817, -7.60048499999999] },
+      "properties": { "fdt_id": "KEDUNGPRING RW 02 PURWOKERTO - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.223513, -7.559700999999988] },
+      "properties": { "fdt_id": "KALIWEDI RW 06 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.17454, -7.545070000000004] },
+      "properties": { "fdt_id": "CINDAGA RW 12 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.205609, -7.45772299999998] },
+      "properties": { "fdt_id": "KARANGANYAR RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.098184, -7.479824000000008] },
+      "properties": { "fdt_id": "KARANGTALUN KIDUL RW 04 PURWOKERTO - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.12672, -7.527649999999994] },
+      "properties": { "fdt_id": "GENTAWANGI RW 04 JATILAWANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.07957, -7.552549999999998] },
+      "properties": { "fdt_id": "PENGADEGAN RW 06 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04338, -7.548020000000005] },
+      "properties": { "fdt_id": "RAWAHENG RW 02 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2399, -7.411899999999996] },
+      "properties": { "fdt_id": "PERUMAHAN PERMATA HIJAU BANCARKEMBAR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.058094, -7.477735999999988] },
+      "properties": { "fdt_id": "CIKAKAK RW 03 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.03583, -7.510690000000015] },
+      "properties": { "fdt_id": "WANGON RW 17 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.09605, -7.514829999999995] },
+      "properties": { "fdt_id": "GERDUREN RW 07 PURWOJATI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.01701, -7.494460000000005] },
+      "properties": { "fdt_id": "CANDUK RW 06 DAN 07 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04096, -7.498259999999989] },
+      "properties": { "fdt_id": "JURANGBAHAS RW 04 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.169119, -7.449317000000009] },
+      "properties": { "fdt_id": "PANUSUPAN RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.04686, -7.540280000000001] },
+      "properties": { "fdt_id": "OPEN AREA JL. RAYA RAWAHENG WANGON - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.023431, -7.515616000000001] },
+      "properties": { "fdt_id": "DUSUN I, III BANYUMAS - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.06843, -7.534979999999987] },
+      "properties": { "fdt_id": "KLAPAGADING RT 01 SAMPAI RT 04 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.107634, -7.489237000000006] },
+      "properties": { "fdt_id": "KARANGTALUN KIDUL RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0472, -7.542139999999982] },
+      "properties": { "fdt_id": "OPEN AREA JL. RAYA RAWAHENG WANGON - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.197806, -7.377059999999995] },
+      "properties": { "fdt_id": "DAWUHAN WETAN RW 03 KEDUNGBANTENG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.169494, -7.451871000000017] },
+      "properties": { "fdt_id": "PANUSUPAN RW 05 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.216284, -7.374337999999996] },
+      "properties": { "fdt_id": "KARANGNANGKA RW 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.20743, -7.483370000000001] },
+      "properties": { "fdt_id": "NOTOG RW 05 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.247167910664, -7.45486793802808] },
+      "properties": { "fdt_id": "TAMAN ZOTUS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.248667, -7.438601999999996] },
+      "properties": { "fdt_id": "PURWOKERTO KULON RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.05653, -7.403150000000018] },
+      "properties": { "fdt_id": "KRACAK RW 10 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.0704, -7.470650000000001] },
+      "properties": { "fdt_id": "WLAHAR RW 02 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1597, -7.54830000000001] },
+      "properties": { "fdt_id": "BANJARPARAKAN RW 03 RAWALO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.045714, -7.514680999999996] },
+      "properties": { "fdt_id": "WANGON RW 13 WANGON", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1981, -7.467141999999996] },
+      "properties": { "fdt_id": "OPEN AREA JL. BALAI DESA PATIKRAJA - FDT 03", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.172622, -7.451557999999999] },
+      "properties": { "fdt_id": "PANUSUPAN RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3208165, -7.444009541000016] },
+      "properties": { "fdt_id": "OPEN AREA JL LETJEND SUPRAPTO BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.229787, -7.345693000000002] },
+      "properties": { "fdt_id": "KARANG TENGAH RW 07 BATURADEN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.262465, -7.364163] },
+      "properties": { "fdt_id": "BANTERAN RW 04 SUMBANG", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.330733, -7.444691000000006] },
+      "properties": { "fdt_id": "BANJARSARI KIDUL RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.16396, -7.448516000000021] },
+      "properties": { "fdt_id": "PANUSUPAN RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.169909, -7.458970999999983] },
+      "properties": { "fdt_id": "PANUSUPAN RW 06 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.328912, -7.441297999999983] },
+      "properties": { "fdt_id": "BANJARSARI KIDUL RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.20363, -7.465049999999984] },
+      "properties": { "fdt_id": "OPEN AREA JL. BALAI DESA PATIKRAJA - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.099157, -7.486073000000006] },
+      "properties": { "fdt_id": "KARANGTALUN KIDUL RW 04 PURWOKERTO - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2011951, -7.40303710800001] },
+      "properties": { "fdt_id": "OPEN AREA JL. KERTAWIBAWA KARANGLEWAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.09205, -7.519769999999999] },
+      "properties": { "fdt_id": "GERDUREN RW 05 PURWOJATI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.280529, -7.404309000000011] },
+      "properties": { "fdt_id": "KARANGSARI RW 02 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.179565, -7.449301999999987] },
+      "properties": { "fdt_id": "PANUSUPAN RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.319726, -7.624319000000021] },
+      "properties": { "fdt_id": "SIBALUNG RW 05 DAN 06 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.304393, -7.619838500000007] },
+      "properties": { "fdt_id": "SIBALUNG RW 01 DAN 02 PURWOKERTO - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.147406, -7.426084000000004] },
+      "properties": { "fdt_id": "SUDIMARA RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.19738, -7.551060000000016] },
+      "properties": { "fdt_id": "CINDAGA RW 07 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.096393, -7.517829999999995] },
+      "properties": { "fdt_id": "GEDUREN RW 06 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3135085, -7.620880199999986] },
+      "properties": { "fdt_id": "SIBALUNG RW 01 DAN 02 PURWOKERTO - FDT 01", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.21025, -7.467410000000008] },
+      "properties": { "fdt_id": "OPEN AREA JL. BALAI DESA PATIKRAJA - FDT 02", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.161752, -7.471743000000009] },
+      "properties": { "fdt_id": "PANUSUPAN RW 07 PURWOKERTO - FDT 2", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.19655, -7.477089999999995] },
+      "properties": { "fdt_id": "KARANGENDEP RW 01 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.232977, -7.449969000000019] },
+      "properties": { "fdt_id": "KARANGPUCUNG RW 07 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.235819, -7.442612999999993] },
+      "properties": { "fdt_id": "KARANGPUCUNG RW 11 PURWOKERTO SELATAN", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.376469, -7.627999999999993] },
+      "properties": { "fdt_id": "SUMPIUH RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.238689, -7.409762999999998] },
+      "properties": { "fdt_id": "BAMCARKEMBAR RT 03 RW 08 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2784575, -7.394344280000007] },
+      "properties": { "fdt_id": "KARANGSARI RW 01 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.20729, -7.476679999999984] },
+      "properties": { "fdt_id": "NOTOG RW 06 PATIKRAJA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2299, -7.437500000000004] },
+      "properties": { "fdt_id": "DEMOLINE PURWOKERTO HUAWEI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1606806395, -7.371210711299996] },
+      "properties": { "fdt_id": "SOKAWERA RW 04 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.165274011689, -7.371364503891698] },
+      "properties": { "fdt_id": "SOKAWERA RW 03 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.167694, -7.371601999999998] },
+      "properties": { "fdt_id": "SOKAWERA RW 02 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.163298, -7.376992000000005] },
+      "properties": { "fdt_id": "SOKAWERA RW 06 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.35759, -7.626419999999998] },
+      "properties": { "fdt_id": "KEMIRI RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3599046654, -7.619572142300011] },
+      "properties": { "fdt_id": "KEMIRI RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.157803, -7.374049000000005] },
+      "properties": { "fdt_id": "SOKAWERA RW 09 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.158795, -7.376024000000008] },
+      "properties": { "fdt_id": "SOKAWERA RW 08 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.166454, -7.376116000000006] },
+      "properties": { "fdt_id": "SOKAWERA RW 05 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.1680551, -7.37594891000001] },
+      "properties": { "fdt_id": "SOKAWERA RW 01 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.161406, -7.377534000000006] },
+      "properties": { "fdt_id": "SOKAWERA RW 07 BANYUMAS", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2018834, -7.407542210000003] },
+      "properties": { "fdt_id": "PASIR LOR RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.245452, -7.406701999999987] },
+      "properties": { "fdt_id": "BANCARKEMBAR RW 05 PURWOKERTO UTARA", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.238627, -7.399485999999995] },
+      "properties": { "fdt_id": "SAPPHIRE ESTATE KARANGMIRI", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.230293, -7.419956000000005] },
+      "properties": { "fdt_id": "SOKANEGARA RW 04 PURWOKERTO TIMUR", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3128336, -7.446762554000004] },
+      "properties": {
+        "fdt_id": "OPEN AREA JALAN LETJEND SUPRAPTO KELURAHAN SOKARAJA WETAN PURWOKERTO - FDT 02",
+        "type": "FDT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.3143296, -7.449554779000018] },
+      "properties": {
+        "fdt_id": "OPEN AREA JALAN LETJEND SUPRAPTO KELURAHAN SOKARAJA WETAN PURWOKERTO - FDT 01",
+        "type": "FDT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.2830732, -7.404020255000001] },
+      "properties": { "fdt_id": "KARANGSARI RW 03 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.278951, -7.393232000000003] },
+      "properties": { "fdt_id": "BANTARWUNI RW 04 PURWOKERTO", "type": "FDT" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [109.168734, -7.465790000000001] },
+      "properties": { "fdt_id": "PANUSUPAN RW 07 PURWOKERTO - FDT 1", "type": "FDT" }
+    }
+  ]
+}

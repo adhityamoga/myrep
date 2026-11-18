@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peta Coverage & Jaringan WiFi Purwokerto</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f5f3ff",
+                100: "#ede9fe",
+                600: "#7c3aed",
+                700: "#6d28d9",
+                800: "#5b21b6",
+                900: "#4c1d95",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "Roboto", "sans-serif"],
+              display: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=4" />
+  </head>
+  <body
+    class="bg-white text-slate-800 font-sans antialiased overflow-hidden h-screen w-screen flex flex-col select-none"
+  >
+    <!-- Header -->
+    <header
+      class="h-14 border-b border-slate-200 bg-white px-4 flex items-center justify-between z-40 shrink-0 shadow-sm relative"
+    >
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2.5">
+          <div
+            class="w-8 h-8 rounded-lg bg-brand-800 flex items-center justify-center text-white font-bold text-sm shadow-sm"
+          >
+            MR
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="font-display font-bold text-slate-900 text-sm tracking-tight"
+                >MyRepublic</span
+              >
+              <span
+                class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200"
+                >GIS Portal</span
+              >
+            </div>
+            <span class="text-[11px] text-slate-500 leading-none mt-0.5"
+              >Coverage Area Purwokerto</span
+            >
+          </div>
+        </div>
+
+        <nav
+          class="hidden md:flex items-center gap-1 text-xs font-medium text-slate-600 pl-4 border-l border-slate-200"
+        >
+          <a class="px-3 py-1.5 rounded-md text-brand-800 bg-brand-50 font-semibold" href="#"
+            >Peta Jangkauan</a
+          >
+        </nav>
+      </div>
+
+      <!-- Coverage Search Widget -->
+      <div class="flex items-center gap-2">
+        <div
+          class="relative flex items-center bg-slate-50 border border-slate-200 rounded-md p-1 shadow-sm"
+        >
+          <input
+            type="text"
+            id="address-search"
+            class="w-64 bg-transparent border-none text-xs px-2 py-1 focus:ring-0 text-slate-800 placeholder-slate-400"
+            placeholder="Cek alamat (Jalan, Kec)..."
+          />
+          <button
+            id="btn-search-address"
+            class="px-2 py-1 bg-brand-800 hover:bg-brand-900 text-white text-xs font-medium rounded transition-colors"
+            type="button"
+          >
+            Cek
+          </button>
+          <button
+            id="btn-gps"
+            class="w-7 h-7 ml-1 bg-white hover:bg-slate-100 text-slate-600 border border-slate-200 rounded flex items-center justify-center transition-colors"
+            type="button"
+            title="Gunakan Lokasi Saya"
+          >
+            <span class="material-icons text-[16px]">my_location</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex-1 flex relative overflow-hidden">
+      <!-- Sidebar -->
+      <aside
+        class="w-[340px] border-r border-slate-200 bg-white flex flex-col z-30 shadow-sm shrink-0 relative overflow-hidden"
+      >
+        <!-- Search -->
+        <div class="p-3 border-b border-slate-200 bg-slate-50/70">
+          <div class="relative flex items-center">
+            <span class="material-icons absolute left-3 text-slate-400 text-[19px]">search</span>
+            <input
+              id="sidebar-search"
+              type="text"
+              class="w-full bg-white pl-9 pr-3 py-2 text-xs text-slate-800 placeholder-slate-400 border border-slate-300 rounded-md focus:outline-none focus:border-brand-700 focus:ring-1 focus:ring-brand-700 shadow-sm transition-all"
+              placeholder="Cari Cluster atau FAT..."
+            />
+          </div>
+        </div>
+
+        <div
+          class="px-3 py-2 border-b border-slate-100 flex items-center justify-between text-[11px] text-slate-500 bg-white"
+        >
+          <span>Struktur Hierarki Jaringan</span>
+        </div>
+
+        <!-- ACCORDION CONTENT -->
+        <div
+          id="sidebar-accordion"
+          class="flex-1 overflow-y-auto divide-y divide-slate-100 bg-white custom-scrollbar"
+        >
+          <div class="loading-state p-4 text-center text-xs text-slate-500">
+            Memuat Data Jaringan...
+          </div>
+        </div>
+
+        <!-- SIDEBAR FOOTER (Legend) -->
+        <div
+          class="p-3 border-t border-slate-200 bg-slate-50 flex flex-col gap-2 text-[10px] text-slate-600"
+        >
+          <div class="font-bold text-slate-800 border-b border-slate-200 pb-1 mb-1 text-[11px]">
+            Tipe Node Jaringan
+          </div>
+          <div class="flex items-center gap-1.5 font-bold">
+            <span class="material-icons text-[#2563eb] text-[16px]">hub</span>
+            FDT (Node Induk)
+          </div>
+
+          <div
+            class="font-bold text-slate-800 border-b border-slate-200 pb-1 mt-1 mb-1 text-[11px] flex items-center gap-1"
+          >
+            <span class="material-icons text-slate-400 text-[14px]">device_hub</span>
+            Utilisasi FAT (Node Distribusi)
+          </div>
+          <div class="grid grid-cols-2 gap-1.5 pl-1">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-[#28a745]"></span> 0-10% (Kosong)
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-[#8ce196]"></span> 11-30% (Aman)
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-[#ffc107]"></span> 31-50% (Sedang)
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-[#fd7e14]"></span> 51-70% (Hampir Penuh)
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-[#dc3545]"></span> 71-90% (Penuh)
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-[#000000]"></span> 91-100% (Booked)
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-[#9ca3af]"></span> N/A (Tanpa Data)
+            </div>
+          </div>
+        </div>
+
+        <!-- SIDEBAR DETAIL VIEW (Overlay) -->
+        <div
+          id="sidebar-detail"
+          class="absolute inset-0 bg-white z-50 flex flex-col transform translate-x-full transition-transform duration-300 border-l border-slate-200 shadow-xl overflow-hidden"
+        >
+          <div class="p-3 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
+            <button
+              id="btn-back-sidebar"
+              class="flex items-center gap-1 text-xs font-semibold text-brand-700 hover:text-brand-800 transition-colors"
+            >
+              <span class="material-icons text-[18px]">arrow_back</span>
+              Kembali ke List
+            </button>
+            <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-medium"
+              >Detail FAT</span
+            >
+          </div>
+          <div id="sidebar-detail-content" class="flex-1 overflow-y-auto p-4 custom-scrollbar">
+            <!-- Content injected by JS -->
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT: LEAFLET MAP -->
+      <main class="flex-1 relative overflow-hidden bg-[#f1f3f4]">
+        <!-- Floating Banner Coverage Result -->
+        <div
+          id="coverage-banner"
+          class="hidden absolute top-4 left-1/2 -translate-x-1/2 z-[1000] px-4 py-3 rounded-lg shadow-lg text-sm font-medium border text-center min-w-[300px]"
+        >
+          <!-- Banner content -->
+        </div>
+
+        <div id="map" class="w-full h-full z-10"></div>
+      </main>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/app.js?v=17"></script>
+    <script>
+      // Service worker temporarily disabled
+    </script>
+  </body>
+</html>

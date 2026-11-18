@@ -14,19 +14,14 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Internet Cepat Purwokerto | MyRepublic" },
+      {
+        title: "MyRepublic Purwokerto | Internet Fiber Rumah Cepat & Stabil",
+      },
       {
         name: "description",
         content:
-          "Temukan paket internet fiber MyRepublic untuk rumah di Purwokerto dan cek jangkauan di alamat Anda.",
+          "Pasang internet fiber MyRepublic di Purwokerto. Paket rumah cepat, tanpa batas kuota, dan harga terjangkau untuk keluarga, streaming, serta gaming.",
       },
-      { property: "og:title", content: "Internet Cepat Purwokerto | MyRepublic" },
-      {
-        property: "og:description",
-        content: "Paket internet fiber stabil untuk rumah dan keluarga di Purwokerto.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -41,8 +36,8 @@ function Index() {
       <SpeedTest />
       <CoverageChecker />
       <Benefits />
-      <Faq />
       <ConversionCta />
+      <Faq />
       <Footer />
       <FloatingWhatsApp />
     </main>

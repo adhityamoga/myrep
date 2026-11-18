@@ -18,6 +18,7 @@ export function Footer() {
               <a href="/#paket">Paket Internet</a>
               <a href="/#speedtest">Speed Test</a>
               <a href="/#jangkauan">Cek Jangkauan</a>
+              <a href="/coverage">Peta GIS FAT</a>
               <a href="/#keunggulan">Keunggulan</a>
               <a href="/#faq">FAQ</a>
             </div>

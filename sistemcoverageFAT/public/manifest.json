@@ -1,0 +1,20 @@
+{
+  "name": "Coverage Checker Purwokerto",
+  "short_name": "Coverage FAT",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f111a",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Wifi_icon.svg/1024px-Wifi_icon.svg.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Wifi_icon.svg/1024px-Wifi_icon.svg.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

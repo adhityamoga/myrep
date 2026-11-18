@@ -306,3 +306,38 @@
     transparent var(--fill-angle)
   );
 }
+
+/* Sleek modern map tile styling */
+.map-tiles-modern {
+  filter: saturate(0.68) brightness(1.02) contrast(1.03);
+}
+
+.dark .map-tiles-modern {
+  filter: saturate(0.55) brightness(0.85) contrast(1.15) invert(0.9) hue-rotate(180deg);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Rocket Floating & Flying Animations */
+@keyframes rocket-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(-4deg);
+  }
+}
+
+.animate-rocket-float {
+  animation: rocket-float 2.4s ease-in-out infinite;
+}
+
+

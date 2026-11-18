@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CoverageRouteImport } from './routes/coverage'
 import { Route as KarirRouteImport } from './routes/karir'
 import { Route as KebijakanPrivasiRouteImport } from './routes/kebijakan-privasi'
 import { Route as SyaratKetentuanRouteImport } from './routes/syarat-ketentuan'
@@ -17,6 +18,11 @@ import { Route as SyaratKetentuanRouteImport } from './routes/syarat-ketentuan'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoverageRoute = CoverageRouteImport.update({
+  id: '/coverage',
+  path: '/coverage',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KarirRoute = KarirRouteImport.update({
@@ -37,12 +43,14 @@ const SyaratKetentuanRoute = SyaratKetentuanRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/coverage': typeof CoverageRoute
   '/karir': typeof KarirRoute
   '/kebijakan-privasi': typeof KebijakanPrivasiRoute
   '/syarat-ketentuan': typeof SyaratKetentuanRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/coverage': typeof CoverageRoute
   '/karir': typeof KarirRoute
   '/kebijakan-privasi': typeof KebijakanPrivasiRoute
   '/syarat-ketentuan': typeof SyaratKetentuanRoute
@@ -50,20 +58,29 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/coverage': typeof CoverageRoute
   '/karir': typeof KarirRoute
   '/kebijakan-privasi': typeof KebijakanPrivasiRoute
   '/syarat-ketentuan': typeof SyaratKetentuanRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/karir' | '/kebijakan-privasi' | '/syarat-ketentuan'
+  fullPaths:
+    '/' | '/coverage' | '/karir' | '/kebijakan-privasi' | '/syarat-ketentuan'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/karir' | '/kebijakan-privasi' | '/syarat-ketentuan'
-  id: '__root__' | '/' | '/karir' | '/kebijakan-privasi' | '/syarat-ketentuan'
+  to: '/' | '/coverage' | '/karir' | '/kebijakan-privasi' | '/syarat-ketentuan'
+  id:
+    | '__root__'
+    | '/'
+    | '/coverage'
+    | '/karir'
+    | '/kebijakan-privasi'
+    | '/syarat-ketentuan'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CoverageRoute: typeof CoverageRoute
   KarirRoute: typeof KarirRoute
   KebijakanPrivasiRoute: typeof KebijakanPrivasiRoute
   SyaratKetentuanRoute: typeof SyaratKetentuanRoute
@@ -76,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coverage': {
+      id: '/coverage'
+      path: '/coverage'
+      fullPath: '/coverage'
+      preLoaderRoute: typeof CoverageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/karir': {
@@ -104,6 +128,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CoverageRoute: CoverageRoute,
   KarirRoute: KarirRoute,
   KebijakanPrivasiRoute: KebijakanPrivasiRoute,
   SyaratKetentuanRoute: SyaratKetentuanRoute,
